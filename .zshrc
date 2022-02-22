@@ -26,33 +26,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-#=== prompt
-#setprompt() {
-#  setopt prompt_subst
-
-#  if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then 
-#    p_host='%F{yellow}%M%f'
-#  else
-#    p_host='%F{green}%M%f'
-#  fi
-
-#  PS1=${(j::Q)${(Z:Cn:):-$'
-#    %F{cyan}[%f
-#    %(!.%F{red}%n%f.%F{green}%n%f)
-#    %F{cyan}@%f
-#    ${p_host}
-#    %F{cyan}][%f
-#    %F{blue}%~%f
-#    %F{cyan}]%f
-#    %(!.%F{red}%#%f.%F{green}%#%f)
-#    " "
-#  '}}
-
-#  PS2=$'%_>'
-#  RPROMPT=$'${vcs_info_msg_0_}'
-#}
-#setprompt
-
 #=== Test and then source alias definitions.
 if [ -f ~/.aliases ]; then
         source ~/.aliases
@@ -60,7 +33,7 @@ else
         print "Note: ~.aliases is unavailable."
 fi
 
-#=== so users can see
+#=== so I can write from other distros
 umask 0002
 
 #=== command not found
@@ -74,9 +47,6 @@ if [[ $STICKY_NOTE ]]; then
 fi
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
