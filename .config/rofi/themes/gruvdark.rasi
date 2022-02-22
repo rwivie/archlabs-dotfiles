@@ -80,8 +80,8 @@ element normal.active {
 }
 
 element selected.normal {
-    background-color: @border-color;
-    text-color:       @selected-color;
+    background-color: var(border-color);
+    text-color:       var(selected-color);
 }
 
 element selected.urgent {
