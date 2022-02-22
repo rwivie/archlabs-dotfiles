@@ -1,0 +1,12 @@
+/** Basic config file **/
+
+configuration {
+  show-icons:         true;
+  icon-theme:         "Papirus";
+}
+
+@theme "gruvdark"
+
+element {
+    children: [element-icon, element-text];
+}
