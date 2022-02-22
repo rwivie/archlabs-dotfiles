@@ -1,0 +1,117 @@
+;=== arch polybar configs ====
+
+;=====================================================
+;     File Includes
+;=====================================================
+
+[section/base]
+include-file = /home/ron/.config/polybar/master.conf
+include-file = /home/ron/.config/polybar/modules.conf
+
+
+;=====================================================
+;     Openbox Bars
+;=====================================================
+
+[bar/openbox-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = eDP
+
+modules-left   = workspaces mpd
+modules-center = window_switch clock redshift
+;modules-right  = pkg memory temperature coreuse network volume
+modules-right  = memory temperature coreuse volume
+
+;=====================================================
+;     i3 Bars
+;=====================================================
+
+[bar/i3-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = eDP
+
+;modules-left   = i3 menu mpd2
+modules-left = jgmenu i3 mpd3
+modules-center = clock
+;;modules-right  = pkg memory temperature coreuse network volume
+;modules-right = memory temperature coreuse volume services
+modules-right = memory temperature coreuse
+
+
+[bar/i3-tray]
+
+monitor = eDP
+width = 100%
+height = 24
+border-size = 0
+border-top-size = 2
+border-bottom-size = 0
+margin-top = 1
+radius = 0
+bottom = true
+tray-detached = false
+tray-position = right
+tray-padding = 2
+;;tray-transparent = true
+;;tray-background = #0063ff
+tray-background = ${colors.background}
+line-size = 2
+;;font-0 = "DejaVu Sans Mono:size=10;2"
+;;font-0 = "Iosevka Nerd Font:size=10;2"
+;font-0 = "JetBrains Mono Medium:style=Medium,Regular:size=10;2"
+;font-1 = "Font Awesome 5 Brands:size=11;2"
+;font-2 = "FontAwesome:size=11;2"
+;#font-2 = "Material Design Icons:size=10;2"
+;font-3 = "Iconmoon:size=10;2"
+;font-4 = "Ubuntu Nerd Font:size=10;2"
+font-0 = "JetBrains Mono Medium:style=Medium,Regular:size=10;2"
+;font-0 = "Noto Sans:style=Regular:size=11;2"
+font-1 = "Font Awesome 5 Brands:pixelsize=11;2"
+;font-2 = "MaterialIcons:size=10;2"
+font-2 = "Material Design Icons:style=Regular:size=11;2"
+font-3 = "FontAwesome:size=11;2"
+font-4 = "icomoon:size=11;2"
+font-5 = "Ubuntu Mono Nerd Font:size=11:;2"
+font-6 = "Weather Icons:size=11;2"
+;font-7 = "DejaVu Sans:size=10;2"
+;font-8 = "font-logos:size=10;2"
+font-7 = "font\-logos:style=logos:size=11;2"
+font-8 = "Iosevka Nerd Font:size=11;2"
+offset-x = 0
+offset-y = 0
+fixed-center = true
+border-color = ${colors.border}
+background = ${colors.background}
+foreground = ${colors.foreground}
+;module-margin = 1
+padding-right = 0
+padding-left = 0
+;separator = │
+;separator = %{F#f100}|
+;seperator = %{F#4c566a}|
+separator = %{F#5e81ac}󰇙
+modules-left   = retro chrome isrunning-compton screenoff news-archlinux system-uptime-pretty
+modules-center = filesystem info-trash
+modules-right  = 
+
+[settings]
+;pseudo-transparency = true
+
+
+;=====================================================
+;     Bspwm Bars
+;=====================================================
+
+[bar/bspwm-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = eDP
+
+modules-left   = bspwm menu
+modules-center = clock
+modules-right  = pkg memory temperature coreuse network volume
