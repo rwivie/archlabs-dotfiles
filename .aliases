@@ -1,0 +1,87 @@
+#==== Pacman alias examples
+alias pacupg='sudo pacman -Syu'		# Synchronize with repositories and then upgrade packages that are out of date on the local system.
+alias pacdl='pacman -Sw'		# Download specified package(s) as .tar.xz ball
+alias pacin='sudo pacman -S'		# Install specific package(s) from the repositories
+alias pacins='sudo pacman -U'		# Install specific package not from the repositories but from a file 
+alias pacre='sudo pacman -R'		# Remove the specified package(s), retaining its configuration(s) and required dependencies
+alias pacrem='sudo pacman -Rns'		# Remove the specified package(s), its configuration(s) and unneeded dependencies
+alias pacrep='pacman -Si'		# Display information about a given package in the repositories
+alias pacreps='pacman -Ss'		# Search for package(s) in the repositories
+alias pacloc='pacman -Qi'		# Display information about a given package in the local database including optional deps
+alias paclocs='pacman -Qs'		# Search for package(s) in the local database
+alias paclo="pacman -Qdt"		# List all packages which are orphaned
+alias pacc="sudo pacman -Sc"		# remove all the cached packages that are not currently installed, and the unused sync database
+alias paccc="sudo pacman -Scc"          # remove all files from the cache, use the clean switch twice, this is the most aggressive approach and will leave nothing in the cache folder
+alias paclf="pacman -Ql"		# List all files installed by a given package
+alias pacown="pacman -Qo"		# Show package(s) owning the specified file(s)
+alias pacexpl="pacman -D --asexp"	# Mark one or more installed packages as explicitly installed 
+alias pacimpl="pacman -D --asdep"	# Mark one or more installed packages as non explicitly installed
+alias pacreport="sudo pacreport --unowned-files" # list all files not installed by pacman
+alias packeys="sudo pacman-key --refresh-keys" # refresh pacman keys
+
+#==== Additional pacman alias examples  see https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks for more
+alias pacupd='sudo pacman -Sy && sudo abs'         # Update and refresh the local package and ABS databases against repositories
+alias pacinsd='sudo pacman -S --asdeps'            # Install given package(s) as dependencies
+alias pacmir='sudo pacman -Syy'                    # Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
+alias pacbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'" # browse all installed packages with an instant preview of each package; uses fzf to present a two-pane view listing all packages with package info shown on the right; Enter letters to filter the list of packages; use arrow keys (or Ctrl-j/Ctrl-k) to navigate; press Enter to see package info under less. 
+#pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'
+alias pacdevel="pacman -Qq | grep -Ee '-(bzr|cvs|darcs|git|hg|svn)$'" # list all development/unstable packages
+alias pecle="pacman -Qe" # List all explicitly installed packages
+alias paclen="pacman -Qent" #List all explicitly installed native packages (i.e. present in the sync database) that are not direct or optional dependencies
+alias pacfor="pacman -Qm" #List all foreign packages (typically manually downloaded and installed or packages removed from the repositories)
+alias pacnat="pacman -Qn" #List all native packages (installed from the sync database(s))
+alias reflect="sudo reflector --country 'United States' --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+
+#==== '[r]emove [o]rphans' - recursively remove ALL orphaned packages
+alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rns \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
+
+#==== find all pacnew and pacsave files $ find /etc -regextype posix-extended -regex ".+\.pac(new|save)" 2> /dev/null
+alias pacnewsave="find /etc -regextype posix-extended -regex '.+\.pac(new|save)' 2> /dev/null"
+alias pacdiff="sudo DIFFPROG=meld pacdiff"
+
+#==== remove everything but base base-devel
+alias killemall='sudo pacman -R $(comm -23 <(pacman -Qq | sort) <((for i in $(pacman -Qqg base base-devel); do pactree -ul "$i"; done) | sort -u))'
+
+# dealing with the following message from pacman:
+# 
+#     error: couldnt lock database: file exists
+#     if you are sure a package manager is not already running, you can remove /var/lib/pacman/db.lck
+
+alias pacunlock="sudo rm /var/lib/pacman/db.lck"   # Delete the lock file /var/lib/pacman/db.lck
+alias paclock="sudo touch /var/lib/pacman/db.lck"  # Create the lock file /var/lib/pacman/db.lck
+
+#==== systemd aliases
+alias serv="systemctl --type=service"
+alias servrun="systemctl --type=service --state=running"
+alias servuser="systemctl --user --type=service"
+alias servrunuser="systemctl --user --type=service --state=running"
+
+#==== journalctl aliases
+alias follow="journalctl -f"
+alias bootlog="journalctl -b"
+alias logerr="journalctl -p 3 -xb" # Look for errors in the log files located at /var/log, as well as high priority errors in the systemd journal
+alias xorglog="grep -e Log -e tty /var/log/Xorg.0.log"
+alias userlog="journalctl _UID=1000" # full log
+alias userlogtoday="journalctl _UID=1000 --since today" # see kournalctl_cheatsheet.txt
+alias userlogtodayfollow="journalctl _UID=1000 --since today -f"
+
+#==== git home backup
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+#==== other aliases
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias wioff="nmcli r wifi off"
+alias wion="nmcli r wifi on"
+alias nethogs="sudo nethogs wlo1"
+alias nethogs-eth="sudo nethogs enp7s0"
+alias iftop="sudo iftop -i wlo1"
+alias iftop-eth="sudo iftop -i enp7s0"
+alias sued="sudo -i nano"
+
+#==== misc aliases
+alias clock="tty-clock -sSctB -C 6"
+alias obxprop='xprop | grep "^_OB_APP"'
+alias ls='ls --color=auto'
+alias dunsthist="dunstctl history-pop"
+alias scrot_th="scrot -t 20 -d 5 -c $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png"
+
