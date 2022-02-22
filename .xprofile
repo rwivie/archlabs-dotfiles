@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# sourced at boot by ~/.xinitrc and most display managers
+
+# xdg standard configuration location (needed by some applications)
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# add ~/.local/bin to the PATH (application executables)
+export PATH="$HOME/.local/bin:$PATH"
+#export PATH=$PATH:$HOME/Bin/:/usr/local/bin
+
+# dpms: timeout sleep off
+#xset dpms 600 900 1200
+# turn off system beep
+xset -b
+
+#==== load Xresources
+xrdb merge ~/.Xresources
+
+# set super key alone to emulate alt+F1
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+
+#=== kunst exports
+export KUNST_SIZE="250x250"
+export KUNST_POSITION="+0+0"
+export KUNST_MUSIC_DIR="/home/ron/Music/"
