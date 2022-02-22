@@ -1,3 +1,6 @@
+Xcursor.theme: capitaine-cursors-light
+Xcursor.size: 16
+
 !===== gruvbox dark  https://codeclimate.com/github/madnight/dotfiles/.config/colorschemes/gruvbox-dark.xresources/source
 
 ! -----------------------------------------------------------------------------
@@ -99,11 +102,11 @@ URxvt.tabbed.tab-bg:    4
 URxvt*buffered:         false
 
 !=== Fonts config ===
-!!Xft.dpi: 142
-!Xft.dpi: 96
-!Xft.autohint: 0
-!Xft.lcdfilter:  lcddefault
-!Xft.hintstyle:  hintfull
-!Xft.hinting: 1
-!Xft.antialias: 1
-!Xft.rgba: rgb
+!Xft.dpi: 142
+Xft.dpi: 96
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
