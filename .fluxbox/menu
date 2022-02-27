@@ -1,0 +1,58 @@
+[begin] (== wickedlester ==)
+[encoding] {UTF-8}
+	[nop] (==========)
+        [exec] (⚫ Firefox) {firefox}
+      	[exec] (⚫ Thunar) {thunar}
+      	[exec] (⚫ Gcolor2) {gcolor2}
+      	[exec] (⚫ Nitrogen) {nitrogen}
+      	[exec] (⚫ Geany) {geany}
+     	[exec] (⚫ Lxappearance) {lxappearance}
+     	[nop] (==========)
+     	[exec] (❖ Steam) {steam}    	
+	[nop] (==========)
+	[submenu] (Fluxbox menu)
+		[nop] (Custom configs)
+		[exec] (menu) {geany ~/.fluxbox/menu}
+		[exec] (keys) {geany ~/.fluxbox/keys}
+		[exec] (init) {geany ~/.fluxbox/init}
+		[exec] (startup) {geany ~/.fluxbox/startup}
+      	[config] (Configure)
+		[submenu] (System Styles) {Choose a style...}
+      			[stylesdir] (/usr/share/fluxbox/styles)
+		[end]
+		[submenu] (User Styles) {Choose a style...}
+      			[stylesdir] (~/.fluxbox/styles)
+		[end]
+                [submenu] (wickedlester styles) {Choose a style...}
+                        [stylesdir] (~/.fluxbox/styles_wickedlester)
+                [end]
+      		[workspaces] (Workspace List)
+		[submenu] (Tools)
+      			[exec] (○ Window name) {xprop WM_CLASS|cut -d \" -f 2|xmessage -file - -center}
+      			[exec] (○ Screenshot - JPG) {import screenshot.jpg && display -resize 50% screenshot.jpg}
+      			[exec] (○ Screenshot - PNG) {import screenshot.png && display -resize 50% screenshot.png}
+      			[exec] (○ Regen Menu) {fluxbox-generate_menu}
+		[end]
+#		[submenu] (Window Managers)
+#      			[restart] (○ mwm) {mwm}
+#      			[restart] (○ twm) {twm}
+#     			[restart] (○ compiz) {compiz}
+#      			[restart] (○ kde) {startkde}
+#      			[restart] (○ fvwm) {fvwm}
+#      			[restart] (○ xfce4) {startxfce4}
+#      			[restart] (○ fvwm2) {startfvwm2}
+#      			[restart] (○ blackbox) {startblackbox}
+#      			[restart] (○ windowmaker) {wmaker}
+		[end]
+      		[exec] (○ Lock screen) {xlock}
+      		[commanddialog] (○ Fluxbox Command)
+      		[reconfig] (○ Reload config)
+      		[restart] (○ Restart)
+      		[exec] (○ About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center}
+      		[nop]
+#      		[exit] (○ Exit)
+                [exec] (○ Exit) {rofi_run -l}
+	[end]
+[endencoding]
+[end]
+

@@ -1,0 +1,57 @@
+#!/bin/sh
+#
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+#==== misc
+picom --config ~/.config/picom/picom.conf --experimental-backends &
+dunst &
+xrdb -load ~/.Xresources &
+
+#==== network manager applet
+nm-applet &
+
+#==== bluetooth
+blueman-applet &
+
+#==== Set background image
+(sleep 1; nitrogen --restore) &
+#~/.fehbg &
+
+#==== on laptops without seperate numeric keyboard put hashtag in front
+numlockx &
+
+#==== GNOME PolicyKit authentication
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+#==== Volume control for systray
+(sleep 2; pasystray --no-notify) &
+
+#==== Turn off/on System Beep
+xset b off
+
+#==== set dpms
+#xset dpms 0 0 600 &
+
+#==== Enable power management
+#xfce4-power-manager &
+
+#==== let's tile
+(sleep 5; zentile) &
+
+#==== hot corners with cornora-git
+cornora -br "skippy-xd" -bl "sleep 1; xset dpms force off" -v -iof &
+
+#==== gtk settings
+xsettingsd &
+
+#== lock screen
+xautolock -time 10 -locker i3lock-arc-dark.sh -corners '+-00' -cornerdelay 15 -notify 15 -notifier "notify-send 'Screen will lock in 15 s'" &
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+#exec fluxbox
+# or if you want to keep a log:
+exec fluxbox -log "/home/wickedlester/.fluxbox/log"

@@ -1,0 +1,151 @@
+style.name: bruise
+style.author: wickedlester
+style.date: 10/01/2005
+style.credits: thanks to the *box community
+style.comments: color mod of my blackgold style
+
+!toolbar |==>
+
+toolbar: raised bevel1 solid
+toolbar.color: #272727
+toolbar.textColor: #3766ae
+
+toolbar.button: raised bevel1 solid
+toolbar.button.color: #464646
+toolbar.button.picColor: #3766ae
+
+toolbar.button.pressed: sunken bevel1 solid
+toolbar.button.pressed.color: #1D1C19
+toolbar.button.pressed.picColor: #3766ae
+
+toolbar.label: raised bevel1  solid
+toolbar.label.color: #303030
+toolbar.label.textColor: #3766ae
+
+toolbar.windowLabel: raised bevel1 solid
+toolbar.windowLabel.color: #303030
+toolbar.windowLabel.textColor: #3766ae
+
+toolbar.clock: raised bevel1 solid
+toolbar.clock.color: #303030
+toolbar.clock.textColor: #3766ae
+
+!menu |==>
+
+menu.title: raised bevel1 solid
+menu.title.color: #272727
+menu.title.textColor: #3766ae
+
+menu.frame: raised bevel1 solid
+menu.frame.color: #303030
+menu.frame.textColor: #3766ae
+
+menu.hilite: raised bevel1 solid
+menu.hilite.color: #3766ae
+menu.hilite.textColor: CCCCCC
+
+menu.bullet: comment
+menu.bullet.position: right
+
+!window |==>
+
+window.title.focus: raised bevel1 solid
+window.title.focus.color: #272727
+
+
+window.title.unfocus: raised bevel1 solid
+window.title.unfocus.color: #303030
+
+window.label.focus: flat solid
+window.label.focus.color: #272727
+window.label.focus.textColor: #3766ae
+
+window.label.unfocus: flat solid
+window.label.unfocus.color: #303030
+window.label.unfocus.textColor: #565656
+
+window.grip.focus: raised bevel1 solid 
+window.grip.focus.color: #3766ae
+
+window.grip.unfocus: raised bevel1 solid 
+window.grip.unfocus.color: #464646
+
+window.handle.focus: raised bevel1 solid
+window.handle.focus.color: #272727
+
+window.handle.unfocus: raised  bevel1 solid
+window.handle.unfocus.color: #303030
+
+window.button.focus: flat solid
+window.button.focus.color: #272727
+window.button.focus.picColor: #3766ae
+
+window.button.unfocus: flat solid
+window.button.unfocus.color: #303030
+window.button.unfocus.picColor: #565656
+
+window.button.pressed: sunken bevel1 solid
+window.button.pressed.color: #1D1C19
+window.button.pressed.picColor: #3766ae
+
+!fonts |==>
+
+toolbar.font: snap
+menu.title.font: snap 
+menu.frame.font: snap 
+window.font: snap
+
+toolbar.justify: center
+menu.title.justify: center
+menu.frame.justify: center
+window.justify: center
+
+toolbar.fontHeight: 7
+toolbar.fontWeight: normal
+menu.fontHeight: 10
+menu.fontWeight: normal
+window.fontHeight: 10
+window.fontWeight: normal
+
+!misc |==>
+
+borderColor: #1D1C19
+borderWidth: 1
+bevelWidth: 1
+handleWidth: 3
+rootCommand:  bsetroot -gradient vertical -from #303030 -to #000000
+
+! -- 3dc theme start --
+5197647
+4210752
+4737096
+6118749
+4210752
+5197647
+4737096
+1513239
+11035189
+5197647
+8421504
+10527141
+3684408
+4737096
+10527141
+4737096
+1513239
+13421772
+5197647
+4737096
+13421772
+3026478
+6710886
+1645597
+11823416
+3684408
+10527141
+5658198
+2368548
+10183486
+12937777
+
+
