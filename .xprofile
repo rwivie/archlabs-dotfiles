@@ -17,6 +17,9 @@ xset -b
 #==== load Xresources
 xrdb merge ~/.Xresources
 
+#==== ser resolution
+xrandr --output DisplayPort-1 --mode 2560x1440 --rate 144.00
+
 # set super key alone to emulate alt+F1
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
