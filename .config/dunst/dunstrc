@@ -266,7 +266,28 @@
     # will be executed in sequence.
     mouse_left_click = close_current
     mouse_middle_click = do_action, close_current
+#    mouse_middle_click = context,close_current #close_current is optional
     mouse_right_click = close_all
+
+#============================
+#Activating an action
+
+#There are a two ways you can activate an action:
+#Open the context menu and choose the action
+
+#To open the context menu, first add the following to your dunstrc:
+
+#[global]
+#    mouse_middle_click = context,close_current #close_current is optional
+
+#After saving that and restarting dunst you can activate the action by middle clicking on it. This will open dmenu (or the dmenu alternative you've configured in your dunstrc) with the different actions you can activate. If you've used the dunstify command from above, you'll see the action you've chosen printed in stdout.
+#Activate it directly
+
+#Add the following to your dunstrc:
+
+#[all_notifications] # A rule that matches all notifications
+#    action_name = "no" # Optional, to activate the action "no" automatically
+#==============================
 
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
@@ -307,19 +328,21 @@
     # Otherwise the '#' and following  would be interpreted as a comment.
     background = "#1d2021B3"
     foreground = "#d65d0e"
-    timeout = 5
+    timeout = 15
  
 [urgency_normal]
     background = "#1d2021B3"
     foreground = "#d65d0e"
-    timeout = 5
+    timeout = 15
  
 [urgency_critical]
     #background = "#101423"
     #foreground = "#EEFFFF"
     background = "#1d2021B3"
     foreground = "#cc241d"
-    timeout = 5
+#    timeout = 15
+    timeout = 0
+    icon = /usr/share/icons/Papirus-Dark/22x22/emblems/emblem-urgent.svg
  
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
