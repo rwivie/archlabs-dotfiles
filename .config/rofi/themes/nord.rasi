@@ -1,0 +1,168 @@
+/* global settings and color variables */
+* {
+   blue:             #81A1C1;
+   darkblue:         #B48EAD;
+   cyan:             #88C0D0;
+   lightcyan:        #B48EAD;
+   green:            #A3BE8C;
+   red:              #BF616A;
+
+   dark1:            #2E3440;
+   dark2:            #3B4252;
+   dark3:            #434C5E;
+   dark4:            #7B8394;
+
+   light1:           #D8DEE9;
+
+   background-color: var(dark1);
+   border-color:     var(dark2);
+   text-color:       var(dark3);
+   dark-text-color:  var(dark4);
+   main-color:       var(blue);
+   highlight:        var(light1);
+   urgent-color:     var(red);
+   selected-color:   var(lightcyan);
+}
+
+window {
+   background-color: var(background-color);
+   width: 33%;
+   padding: 10px;
+   fullscreen: false;
+   border:  2px;
+   border-radius: 0px;
+   border-color: var(border-color);
+}
+
+mainbox {
+   background-color: var(background-color);
+   spacing:0px;
+}
+
+message {
+   padding: 6px 10px;
+   background-color: var(background-color);
+}
+
+textbox {
+   text-color: var(text-color);
+   background-color:var(background-color);
+}
+
+listview {
+   fixed-height: true;
+   dynamic: true;
+   scrollbar: false;
+   spacing: 0px;
+   padding: 1px 0px 0px 0px;
+   margin: 0px 0px 1px 0px;
+   columns: 2;
+   background: var(background-color);
+}
+
+element {
+   padding: 4px 10px;
+}
+
+element normal.normal {
+   padding: 0px 15px;
+   background-color: var(background-color);
+   text-color: var(dark-text-color);
+}
+
+element normal.urgent {
+   background-color: var(background-color);
+   text-color: var(urgent-color);
+}
+
+element normal.active {
+   background-color: var(background-color);
+   text-color: var(main-color);
+}
+
+element selected.normal {
+    background-color: @border-color;
+    text-color:       @selected-color;
+}
+
+element selected.urgent {
+    background-color: var(urgent-color);
+    text-color:       var(background-color);
+}
+
+element selected.active {
+    background-color: var(border-color);
+    text-color:       var(green);
+}
+
+element alternate.normal {
+    background-color: var(background-color);
+    text-color:       var(dark-text-color);
+}
+
+element alternate.urgent {
+    background-color: var(background-color);
+    text-color:       var(urgent-color);
+}
+
+element alternate.active {
+    background-color: var(background-color);
+    text-color:       var(main-color);
+}
+
+scrollbar {
+   background-color: var(background-color);
+   handle-color: var(background-color);
+   handle-width: 0px;
+}
+
+mode-switcher {
+   background-color: var(background-color);
+}
+
+button {
+   background-color: var(background-color);
+   text-color:       var(text-color);
+}
+
+button selected {
+    text-color:       var(main-color);
+}
+
+inputbar {
+   background-color: var(background-color);
+   spacing: 0px;
+   children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+prompt {
+   padding:0px 10px;
+   background-color: var(background-color);
+   text-color: var(highlight);
+}
+
+entry {
+   padding:0px 6px;
+   background-color: var(background-color);
+   text-color: var(light1);
+}
+
+case-indicator {
+   padding:6px 10px;
+   text-color: var(main-color);
+   background-color: var(background-color);
+}
+
+#textbox-prompt-colon {
+	padding:0px 0px;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: var(highlight);
+    background-color: var(background-color);
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}

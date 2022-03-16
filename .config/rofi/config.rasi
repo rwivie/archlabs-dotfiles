@@ -3,6 +3,8 @@
 configuration {
   show-icons:         true;
   icon-theme:         "Papirus";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono Nerd Font 14";
 }
 
 @theme "gruvdark"
