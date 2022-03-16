@@ -1,5 +1,5 @@
 #=================================
-#==== archlabs i3-gaps config ====
+#==== Eos i3-gaps config ====
 #=================================
 
 set $mod Mod4
@@ -8,16 +8,30 @@ set $mod Mod4
 #==== font settings ====
 #=======================
 
-font pango:Fira Sans Regular 11
+font pango:JetBrainsMono Nerd Font Regular 12
 
 #================
 #==== colors ====
 #================
 # class                 border  backgr. text    indicator child_border
+#==== gruvbox
 client.focused          #d65d0e #2E343c #ffffff #d65d0e   #d65d0e
 client.focused_inactive #d65d0e #2E343c #cccccc #5E81AC   #d65d0e
 client.unfocused        #4C566A #2E343c #cccccc #4C566A   #4C566A
 client.urgent           #1793D1 #2E343c #ffffff #1793D1   #1793D1
+
+#==== nord
+#client.focused          #5E81AC #2E343c #ffffff #5E81AC   #5E81AC
+#client.focused_inactive #5E81AC #2E343c #cccccc #5E81AC   #5E81AC
+#client.unfocused        #4C566A #2E343c #cccccc #4C566A   #4C566A
+#client.urgent           #1793D1 #2E343c #ffffff #1793D1   #1793D1
+
+#==== dracula  ====
+#client.focused          #BD93F9 #BD93F9 #F8F8F2 #BD93F9   #BD93F9
+#client.focused_inactive #BD93F9 #44475A #F8F8F2 #BD93F9   #BD93F9
+#client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+#client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+#client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 #========================
 #==== direction keys ====
@@ -30,13 +44,13 @@ set $right semicolon
 #========================
 #==== set workspaces ====
 #========================
-set $WS1 "1: "
-set $WS2 "2: "
+set $WS1 "1: "
+set $WS2 "2: "
 set $WS3 "3: "
-set $WS4 "4: "
+set $WS4 "4: "
 set $WS5 "5: "
 set $WS6 "6: "
-set $WS7 "7: "
+set $WS7 "7: "
 set $WS8 "8: "
 set $WS9 "9: "
 
@@ -78,6 +92,12 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $Mod+w exec exo-open --launch WebBrowser
 bindsym $Mod+f exec exo-open --launch FileManager
 
+#==== i3-quake
+#bindysm $Mod+q exec --no-startup-id i3_quake -H 0.6 -t alacritty
+
+# always pop standard shell, without the menu
+bindsym $mod+b exec --no-startup-id ~/.config/i3/i3-quickterm/i3-quickterm shell
+
 #==== rofi
 bindsym Control+space exec --no-startup-id rofi_run -d
 #==== needed for super to launch rofi through ksuperkey, see ~/.xprofile
@@ -96,6 +116,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym Print exec --no-startup-id screenshot.sh
 bindsym Mod1+Print exec --no-startup-id scrot -u $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym Mod1+Shift+Print exec --no-startup-id scrot -s $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png
+#==== from eos i3
+#bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 #==== media keys
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -127,6 +149,15 @@ set $volumestep 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id $volumepath -nPp up $volumestep -t $statuscmd -u $statussig
 bindsym XF86AudioLowerVolume exec --no-startup-id $volumepath -nPp down $volumestep -t $statuscmd -u $statussig
 bindsym XF86AudioMute        exec --no-startup-id $volumepath mute -n -t $statuscmd -u $statussig
+
+#==== toggle conky's
+#bindsym $mod+shift+p exec --no-startup-id "Conkys_toggle.sh --toggle"
+
+#==== polybar shit  #module_show module_hide module_togle
+#bindsym Mod1+c exec --no-startup-id polybar-msg action info-cava module_toggle
+bindsym Mod1+m exec --no-startup-id polybar-msg action mpd module_toggle
+bindsym Mod1+r exec --no-startup-id polybar-msg action memory module_toggle
+bindsym Mod1+c exec --no-startup-id polybar-msg action cpu module_toggle
 
 #========================
 #==== reload configs ====
@@ -204,6 +235,12 @@ default_orientation horizontal
 #==== alt tab with rofi
 bindcode Mod1+23 exec --no-startup-id "rofi -show window"
 
+# Lock the system
+# lock with a picture:
+#bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
+# lock by blurring the screen:
+#bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
+
 #==========================
 #==== borders and gaps ====
 #==========================
@@ -212,7 +249,9 @@ bindcode Mod1+23 exec --no-startup-id "rofi -show window"
 for_window [class="^.*"] border pixel 1, title_format "<b> %class >> %title </b>"
 
 #==== gaps
-gaps inner 15
+#gaps inner 15
+#gaps outer 5
+gaps inner 10
 gaps outer 5
 
 new_window pixel 1
@@ -242,6 +281,8 @@ bindsym $Mod+Control+Shift+minus gaps outer all minus 5
 #==============================
 for_window [class="(?i)(?:termite|thunar)"] focus
 for_window [class="(?i)(?:geany|firefox)"] focus
+#for_window [class="(?i)(?:Mousepad:xed)"] focus
+for_window [class="Mousepad"] focus
 
 #==== focus, floating, & sticky
 for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
@@ -269,7 +310,9 @@ assign [class="battle.net.exe"] $ws6
 assign [class="Lutris"] $ws6
 assign [class="Mousepad"] $ws4
 assign [class="Leafpad"] $ws4
+assign [class="Xed"] $ws4
 assign [class="Gimp-2.10"] $ws5
+assign [class="Cider"] $ws7
 #assign [class="telegram-desktop"] $ws8
 assign [class="TelegramDesktop"] $ws8
 assign [class="Caprine"] $ws8
@@ -283,23 +326,26 @@ assign [class="Google-chrome"] $ws9
 #==== let's run some shit ====
 #=============================
 #==== run with reload 
-exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id numlockx on
-exec_always --no-startup-id ~/.config/polybar/run.sh
+##exec_always --no-startup-id ~/.config/polybar/run.sh
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id autotiling
 
 #==== run once 
+#exec --no-startup-id systemctl --user start autostart.target
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xsettingsd
-#exec --no-startup-id xfsettingsd --sm-client-disable --disable-wm-check
-#exec --no-startup-id /usr/lib/mate-settings-daemon/mate-settings-daemon
+exec --no-startup-id numlockx on
+exec --no-startup-id nitrogen --restore
 #exec --no-startup-id nm-applet
-exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
-exec --no-startup-id dunst
-#exec --no-startup-id xautolock -time 10 -locker i3lock-arc-dark.sh -corners '+-00'
+#exec --no-startup-id dunst
+exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 exec --no-startup-id xautolock -time 10 -locker i3lock-arc-dark.sh -corners '+-00' -cornerdelay 15 -notify 15 -notifier "notify-send 'Screen will lock in 15 s'"
 #exec --no-startup-id blueman-applet
 exec --no-startup-id mpDris2
-#exec --no-startup-id cornora -br "skippy-xd" -bl "sleep 1; xset dpms force off"
-exec --no-startup-id cornora -br "skippy-xd" -bl "rofi_run -d"
-#exec --no-startup-id pasystray --no-notify
+exec --no-startup-id cornora -br "sleep 1; xset dpms force off" -bl "rofi_run -d"
+#exec --no-startup-id pasystray --notify=none
+##exec --no-startup-id easyeffects --gapplication-service
+exec --no-startup-id /usr/bin/nohup /usr/bin/easyeffects --gapplication-service
+
