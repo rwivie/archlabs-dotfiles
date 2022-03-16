@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+
+WMS=(bspwm i3 openbox xfce)
+for i in "${WMS[@]}"; do
+    if [[ "$(wmctrl -m | grep -i name | awk '{print tolower($2)}')" == "$i" ]]; then
+        WM=$i && break
+    elif [[ "$(xprop -root -notype | grep "WM_NAME =" | tr -d '"' | awk '{print tolower($3)}')" == "$i" ]]; then
+        WM=$i && break
+    elif [[ "$(awk '{print tolower($0)}' <<< "$XDG_CURRENT_DESKTOP")" == "$i" ]]; then
+        WM=$i && break
+    fi
+done
+
+[[ $(pidof lxpolkit) ]] && pkill lxpolkit
+[[ $(pidof lxsession) ]] && pkill lxsession
+
+# Do the logout
+case $WM in
+    xfce)
+        xfce4-session-logout --logout
+        ;;
+    i3)
+        i3-msg exit
+        ;;
+    bspwm)
+        for window_id in $(bspc query -W); do
+            bspc window "$window_id" -c
+        done
+        killall sxhkd
+        bspc quit
+        ;;
+    openbox)
+        openbox --exit
+        ;;
+    *)
+        echo "WM not yet supported.. Exiting" && exit 0
+esac
