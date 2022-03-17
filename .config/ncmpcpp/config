@@ -1,0 +1,22 @@
+#===========================
+#==== archlabs ncmpcpp  ====
+#===========================
+ncmpcpp_directory = ~/.config/ncmpcpp
+lyrics_directory = ~/.config/ncmpcpp/lyrics
+mpd_host = localhost
+mpd_port = 6600
+mpd_music_dir = ~/music
+
+visualizer_data_source = ~/tmp/mpd.fifo
+visualizer_output_name = "my_fifo"
+visualizer_in_stereo = "yes"
+visualizer_type = "wave_filled"
+visualizer_look = ●▮
+
+now_playing_prefix = "$b$2   "
+progressbar_look = =
+user_interface = alternative
+startup_screen = "playlist"
+startup_slave_screen = "visualizer"
+locked_screen_width_part = 50
+ask_for_locked_screen_width_part = no
