@@ -8,3 +8,6 @@ i3-gaps gruvbox
 fluxbox nord
 
 ![Screenshot](screenshot2.png?raw=true)
+
+openbox gruvbox
+![Screenshot](screenshot3.png?raw=true)
