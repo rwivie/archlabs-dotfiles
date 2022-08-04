@@ -72,7 +72,7 @@
     # Defines color of the frame around the notification window.
     #frame_color = "#aaaaaa"
     #frame_color = "#rrggbbaa"
-    frame_color = "#83a598B3"
+    frame_color = "#d65d0eB3"
 
     # Define a color for the separator.
     # possible values are:
@@ -327,12 +327,12 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
     background = "#1d2021B3"
-    foreground = "#83a598"
+    foreground = "#d65d0e"
     timeout = 15
  
 [urgency_normal]
     background = "#1d2021B3"
-    foreground = "#83a598"
+    foreground = "#d65d0e"
     timeout = 15
  
 [urgency_critical]
