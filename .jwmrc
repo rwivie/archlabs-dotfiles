@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<JWM>
+
+    <!-- The root menu. -->
+    <RootMenu onroot="12">
+        <Program icon="utilities-terminal" label="kitty">kitty</Program>
+        <!-- <Program icon="system-run" label="rofi">rofi_run -d</Program> -->
+        <Program icon="system-file-manager" label="Thunar">thunar</Program>
+        <Program icon="firefox" label="Firefox">firefox</Program>
+        <!--
+        <Menu icon="folder" label="Applications">
+            <Program icon="firefox" label="Firefox">firefox</Program>
+            <Program icon="gimp" label="Gimp">gimp</Program>
+            <Program icon="system-file-manager" label="Thunar">thunar</Program>
+        </Menu>
+        -->
+        <Menu icon="folder" label="Utilities">
+            <Program icon="font-select" label="Fonts">font-manager</Program>
+            <Program icon="gtk-info" label="Window Properties">
+                xprop | xmessage -file -
+            </Program>
+            <Program icon="gtk-info" label="Window Information">
+                xwininfo | xmessage -file -
+            </Program>
+            <Kill label="kill" icon="gtk-stop"/>
+        </Menu>
+        <Separator/>
+        <Menu icon="mpd" label="mpd">
+            <Program icon="multimedia-audio-player" label="ncmpcpp">kitty ncmpcpp</Program>
+            <Program icon="player_play" label="play-pause">playerctl play-pause</Program>
+            <Program icon="player_fwd" label="next">playerctl next</Program>
+            <Program icon="player_rew" label="prev">playerctl previous</Program>
+        </Menu>
+        <Separator/>
+        <Program icon="lock" label="Lock">
+           xscreensaver-command -lock
+        </Program>
+        <Separator/>
+        <Restart label="Restart" icon="reload"/>
+        <Exit label="Exit" confirm="true" icon="exit"/>
+    </RootMenu>
+
+    <!-- Options for program groups. -->
+    <Group>
+        <Option>tiled</Option>
+    </Group>
+    <Group>
+        <Name>xterm</Name>
+        <Option>vmax</Option>
+    </Group>
+    <Group>
+        <Name>xclock</Name>
+        <Option>drag</Option>
+        <Option>notitle</Option>
+    </Group>
+    
+    <Group>
+        <Class>kitty</Class>
+        <Option>opacity:0.8</Option>
+    </Group> 
+    <!--
+    <Group>
+        <Class>firefox</Class>
+        <Option>desktop:1</Option>
+    </Group>
+        <Group>
+        <Class>Thunar</Class>
+        <Option>desktop:2</Option>
+    </Group>
+        </Group>
+        <Group>
+        <Class>Mousepad</Class>
+        <Option>desktop:3</Option>
+    </Group> 
+    -->
+    <!-- Tray at the bottom. -->
+    <Tray x="0" y="-1" autohide="off" delay="1000" height="24">
+
+        <!-- <TrayButton icon="/home/ron/Pictures/icons/archlabs_22.png">root:1</TrayButton> -->
+        <TrayButton icon="/home/ron/Pictures/archlabs_22.png">exec:jgmenu_run</TrayButton>
+        <Spacer width="4"/>
+        <TrayButton icon="desktop">showdesktop</TrayButton>
+        <Spacer width="4"/>
+
+        <Pager labeled="true"/>
+
+        <TaskList maxwidth="256"/>
+
+        <!--
+        <Swallow width="32" height="32" name="xclock">xclock</Swallow>
+        -->
+
+        <Dock/>
+        <Spacer width="4"/>
+        <Clock format="%l:%M %p"><Button mask="123">exec:gsimplecal</Button></Clock>
+        <Spacer width="4"/>
+        <TrayButton icon="/home/ron/Pictures/power.png">exec:/home/ron/.local/bin/rofi_run -p</TrayButton>
+        <Spacer width="4"/>
+
+    </Tray>
+
+    <!-- Visual Styles -->
+    <WindowStyle decorations="motif">
+        <Font>JetBrainsMono Nerd Font-12:Regular</Font>
+        <Width>4</Width>
+        <Corner>0</Corner>
+        <Foreground>#dbae93</Foreground>
+        <Background>#1d2021</Background>
+        <Opacity>0.9</Opacity>
+        <Active>
+            <Foreground>#ebdbb2</Foreground>
+            <Background>#282828</Background>
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    <TrayStyle decorations="motif">
+        <Font>JetBrainsMono Nerd Font-12</Font>
+        <Background>#1d2021</Background>
+        <Foreground>#dbae93</Foreground>
+        <Opacity>0.75</Opacity>
+    </TrayStyle>
+    <TaskListStyle list="all" group="true">
+      <Font>JetBrainsMono Nerd Font-12</Font>
+      <Active>
+        <Foreground>#fbf1c7</Foreground>
+        <Background>#83a598:#458588</Background>
+      </Active>
+      <Foreground>#bdae93</Foreground>
+      <Background>#1d2021</Background>
+    </TaskListStyle>
+    <PagerStyle>
+        <Foreground>#a89984</Foreground>
+        <Background>#7c6f64</Background>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <Foreground>#d3869b</Foreground>
+            <Background>#83a598</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle decorations="motif">
+        <Font>JetBrainsMono Nerd Font-12</Font>
+        <Foreground>#ebdbb2</Foreground>
+        <Background>#1d2021</Background>
+        <Active>
+            <Foreground>#ebdbb2</Foreground>
+            <Background>#83a598:#458588</Background>
+        </Active>
+        <Opacity>0.85</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#999999</Background>
+    </PopupStyle>
+
+    <!-- Path where icons can be found.
+         IconPath can be listed multiple times to allow searching
+         for icons in multiple paths.
+      -->
+    <IconPath>
+      /usr/share/icons/Papirus-Dark/32x32/actions
+    </IconPath>
+    <IconPath>
+      /usr/share/icons/Papirus-Dark/24x24/actions
+    </IconPath>
+    <IconPath>
+      /usr/share/icons/Papirus-Dark/32x32/apps
+    </IconPath>
+    <IconPath>
+      /usr/share/icons/Papirus-Dark/32x32/places
+    </IconPath>
+    <IconPath>
+      /usr/share/icons/Papirus-Dark/32x32/status
+    </IconPath>
+    <IconPath>
+      /usr/share/icons/Papirus-Dark/32x32/mimetypes
+    </IconPath>
+    <IconPath>
+      /usr/share/jwm
+    </IconPath>
+
+    <!-- Virtual Desktops -->
+    <!-- Desktop tags can be contained within Desktops for desktop names. -->
+    <Desktops width="4" height="1">
+        <!-- Default background. Note that a Background tag can be
+              contained within a Desktop tag to give a specific background
+              for that desktop.
+         -->
+        <Background type="solid">#111111</Background>
+    </Desktops>
+
+    <!-- Double click speed (in milliseconds) -->
+    <DoubleClickSpeed>400</DoubleClickSpeed>
+
+    <!-- Double click delta (in pixels) -->
+    <DoubleClickDelta>2</DoubleClickDelta>
+
+    <!-- The focus model (sloppy or click) -->
+    <FocusModel>sloppy</FocusModel>
+
+    <!-- The snap mode (none, screen, or border) -->
+    <SnapMode distance="10">border</SnapMode>
+
+    <!-- The move mode (outline or opaque) -->
+    <MoveMode>opaque</MoveMode>
+
+    <!-- The resize mode (outline or opaque) -->
+    <ResizeMode>opaque</ResizeMode>
+
+    <!-- Key bindings -->
+    <Key key="Up">up</Key>
+    <Key key="Down">down</Key>
+    <Key key="Right">right</Key>
+    <Key key="Left">left</Key>
+    <Key key="h">left</Key>
+    <Key key="j">down</Key>
+    <Key key="k">up</Key>
+    <Key key="l">right</Key>
+    <Key key="Return">select</Key>
+    <Key key="Escape">escape</Key>
+
+    <Key mask="A" key="Tab">nextstacked</Key>
+    <Key mask="A" key="F4">close</Key>
+    <Key mask="A" key="#">desktop#</Key>
+    <!-- <Key mask="A" key="F1">root:1</Key> -->
+    <Key mask="A" key="F1">exec:rofi_run -d</Key>
+    <Key mask="A" key="F2">window</Key>
+    <Key mask="A" key="F10">maximize</Key>
+    <Key mask="A" key="Right">rdesktop</Key>
+    <Key mask="A" key="Left">ldesktop</Key>
+    <Key mask="A" key="Up">udesktop</Key>
+    <Key mask="A" key="Down">ddesktop</Key>
+
+    <!-- multimedia keys -->
+    <Key key="XF86AudioRaiseVolume">exec:i3-volume -nPp up 5</Key>
+    <Key key="XF86AudioLowerVolume">exec:i3-volume -nPp down 5</Key>
+    <Key key="XF86AudioMute">exec:i3-volume mute -n</Key>
+    <Key key="XF86AudioPlay">exec:playerctl play-pause</Key>
+    <Key key="XF86AudioNext">exec:playerctl next</Key>
+    <Key key="XF86AudioPrev">exec:playerctl previous</Key>
+
+    <!-- terminal -->
+    <Key mask="1" key="Return">exec:kitty</Key>
+
+    <!-- screenshot -->
+    <Key key="Print">exec:screenshot.sh</Key>
+
+    <!-- toggle conky -->
+    <Key mask="A" key="c">exec:/home/ron/.local/bin/conkytoggle.sh</Key>
+
+    <!-- Mouse bindings -->
+    <Mouse context="root" button="4">ldesktop</Mouse>
+    <Mouse context="root" button="5">rdesktop</Mouse>
+
+    <Mouse context="title" button="1">move</Mouse>
+    <Mouse context="title" button="2">move</Mouse>
+    <Mouse context="title" button="3">window</Mouse>
+    <Mouse context="title" button="4">shade</Mouse>
+    <Mouse context="title" button="5">shade</Mouse>
+    <Mouse context="title" button="11">maximize</Mouse>
+
+    <Mouse context="icon" button="1">window</Mouse>
+    <Mouse context="icon" button="2">move</Mouse>
+    <Mouse context="icon" button="3">window</Mouse>
+    <Mouse context="icon" button="4">shade</Mouse>
+    <Mouse context="icon" button="5">shade</Mouse>
+
+    <Mouse context="border" button="1">resize</Mouse>
+    <Mouse context="border" button="2">move</Mouse>
+    <Mouse context="border" button="3">window</Mouse>
+
+    <Mouse context="close" button="-1">close</Mouse>
+    <Mouse context="close" button="2">move</Mouse>
+    <Mouse context="close" button="-3">close</Mouse>
+
+    <Mouse context="maximize" button="-1">maximize</Mouse>
+    <Mouse context="maximize" button="-2">maxv</Mouse>
+    <Mouse context="maximize" button="-3">maxh</Mouse>
+
+    <Mouse context="minimize" button="-1">minimize</Mouse>
+    <Mouse context="minimize" button="2">move</Mouse>
+    <Mouse context="minimize" button="-3">shade</Mouse>
+
+	<!-- startup shit -->
+	<StartupCommand>
+	jwmstart.sh
+	</StartupCommand>
+
+    <!-- window buttons -->
+    <!--  nord 
+    <ButtonClose>/home/ron/Storage/jwm/nord/close.png</ButtonClose>
+    <ButtonMax>/home/ron/Storage/jwm/nord/max.png</ButtonMax>
+    <ButtonMaxActive>/home/ron/Storage/jwm/nord/max.png</ButtonMaxActive>
+    <ButtonMin>/home/ron/Storage/jwm/nord/min.png</ButtonMin>
+    <ButtonMenu>/home/ron/Storage/jwm/nord/stick.png</ButtonMenu>
+    -->
+    <!-- gruvbox -->
+    <ButtonClose>/home/ron/Storage/jwm/gruvbox/close.png</ButtonClose>
+    <ButtonMax>/home/ron/Storage/jwm/gruvbox/max.png</ButtonMax>
+    <ButtonMaxActive>/home/ron/Storage/jwm/gruvbox/max.png</ButtonMaxActive>
+    <ButtonMin>/home/ron/Storage/jwm/gruvbox/min.png</ButtonMin>
+    <ButtonMenu>/home/ron/Storage/jwm/gruvbox/stick.png</ButtonMenu>
+
+</JWM>
