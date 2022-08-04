@@ -54,7 +54,7 @@ else
 				exit 0
 				;;
 			-d|--drun)
-				rofi -modi drun -show drun -columns 2 "${OPTS[@]}" -show-icons -drun-icon-theme "Papirus-Dark"
+				rofi -modi drun -show drun -columns 2 "${OPTS[@]}" -show-icons -drun-icon-theme "ArchLabs-Dark"
 				;;
 			-r|--run)
 				rofi -show run -columns 2 "${OPTS[@]}"
@@ -78,38 +78,13 @@ else
 				;;
 			-l|--logout)
 				case "$(rofi -sep "|" -dmenu -i -p 'System' -width 20 -hide-scrollbar \
-                                        -theme ~/.config/rofi/themes/gruvdark.rasi \
                                         -theme-str '#window { width: 200px; }' -theme-str 'listview { fixed-height: false; }' \
-                                        -theme-str 'listview { lines: 4; }' -theme-str 'listview { columns: 1; }' \
+                                        -theme-str 'listview { lines: 8; }' -theme-str 'listview { columns: 1; }' \
 					-line-padding 4 -padding 5 -lines 4 <<< " Lock| Logout| Reboot| Shutdown")" in
 					*Lock) i3lock-arc-dark.sh ;;
 					*Reboot) systemctl reboot ;;
 					*Shutdown) systemctl -i poweroff ;;
-					*Logout) session-logout >/dev/null 2>&1 || pkill -15 -t tty"$XDG_VTNR" Xorg ;;
-				esac
-				;;
-			-p|--power)
-				case "$(rofi -sep "|" -dmenu -i -p 'System' -width 20 -hide-scrollbar \
-                                        -theme ~/.config/rofi/themes/gruvdark.rasi \
-                                        -theme-str '#window { width: 200px; }' -theme-str '#window { location: south east; }' -theme-str 'listview { fixed-height: false; }' \
-                                        -theme-str 'listview { lines: 4; }' -theme-str 'listview { columns: 1; }' \
-					-line-padding 4 -padding 5 -lines 4 <<< " Lock| Logout| Reboot| Shutdown")" in
-					*Lock) i3lock-arc-dark.sh ;;
-					*Reboot) systemctl reboot ;;
-					*Shutdown) systemctl -i poweroff ;;
-					*Logout) session-logout >/dev/null 2>&1 || pkill -15 -t tty"$XDG_VTNR" Xorg ;;
-				esac
-				;;
-                         -pf|--powerf)
-				case "$(rofi -sep "|" -dmenu -i -p 'System' -width 20 -hide-scrollbar \
-                                        -theme ~/.config/rofi/themes/gruvdark.rasi \
-                                        -theme-str '#window { width: 200px; }' -theme-str '#window { location: north east; }' -theme-str 'listview { fixed-height: false; }' \
-                                        -theme-str 'listview { lines: 4; }' -theme-str 'listview { columns: 1; }' \
-					-line-padding 4 -padding 5 -lines 4 <<< " Lock| Logout| Reboot| Shutdown")" in
-					*Lock) i3lock-arc-dark.sh ;;
-					*Reboot) systemctl reboot ;;
-					*Shutdown) systemctl -i poweroff ;;
-					*Logout) session-logout >/dev/null 2>&1 || pkill -15 -t tty"$XDG_VTNR" Xorg ;;
+					*Logout) dkcmd exit ;;
 				esac
 				;;
 			*)
