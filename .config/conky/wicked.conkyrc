@@ -1,0 +1,131 @@
+conky.config = {
+
+-- taken from archlabs conky and borrowed bits from Dobbie03
+
+--Various settings
+background = true,
+cpu_avg_samples = 2,
+diskio_avg_samples = 10,
+double_buffer = true,
+if_up_strictness = 'address',
+net_avg_samples = 2,
+no_buffers = true,
+text_buffer_size = 2048,
+update_interval = 1,
+imlib_cache_size = 4096,
+
+--Placement
+alignment = 'top_right',
+gap_x = 20,
+gap_y = 45,
+minimum_height = 1400,
+minimum_width = 240,
+maximum_width = 240,
+maximum_height = 1400,
+
+
+--Graphical
+border_inner_margin = 10,
+border_outer_margin = 2,
+border_width = 1,
+default_bar_width = 220,
+default_bar_height = 10,
+default_gauge_height = 25,
+default_gauge_width = 40,
+default_graph_height = 40,
+default_graph_width = 153,
+default_shade_color = '#1d2021',
+default_outline_color = '#1d2021',
+draw_borders = false,
+draw_graph_borders = true,
+draw_shades = true,
+draw_outline = false,
+
+--Textual
+extra_newline = false,
+format_human_readable = true,
+font = 'JetBrainsMono Nerd Font:size=11',
+max_text_width = 0,
+max_user_text = 16384,
+override_utf8_locale = true,
+short_units = true,
+top_name_width = 21,
+top_name_verbose = false,
+uppercase = false,
+use_spacer = 'none',
+use_xft = true,
+xftalpha = 1,
+
+--Windows
+own_window = true,
+own_window_argb_value = 100,
+own_window_argb_visual = false,
+own_window_class = 'Conky',
+own_window_colour = '#000000',
+own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+own_window_transparent = true,
+own_window_title = 'system_conky',
+own_window_type = 'override',
+
+--Colours
+default_color = '1d2021',
+color0 = '282828', -- dark 1
+color1 = 'd65d0e', -- orange
+color2 = '83a598', -- blue 1
+color3 = '458588', -- blue 2
+color4 = 'd3869b', -- purple 1
+color5 = 'b16286', -- purple 2
+color6 = 'b8bb26', -- green 
+color7 = 'fabd2f', -- yellow
+color8 = '8ec07c', -- aqua 1
+color9 = 'ebdbb2', -- whitish
+
+};
+
+conky.text = [[
+${image ~/.config/conky/res/archlabs_dark_sh.png -p 30,15-s 65x65}
+${color9}${alignr}${font Digital Readout Thick Upright:size=50}${time %I}:${time %M}${font}
+${hr}
+#${alignc}${font Roboto Condensed:pixelsize=10}System: ${exec lsb_release -si} Linux
+System: ${exec lsb_release -si} Linux
+Host: ${nodename}
+Kernel: ${kernel}
+Uptime: ${uptime}
+Packages: ${execi 600 xpkg | wc -l}
+Pending Updates: ${execpi 3600 xbps-install -Mun 2> /dev/null | wc -l}
+#Host:${alignr}${nodename}
+#Uptime:${alignr}${uptime}
+#UTC:${alignr}${font Digital Readout Thick Upright:size=50}${time %I}:${time %M}${font}
+
+${color4}${goto 60}Used${alignr}Size
+Root${goto 60}${fs_used /}${alignr}${fs_size /}
+${alignc}${fs_bar 8,200 /}
+Games${goto 60}${fs_used /run/media/ron/Games/}${alignr}${fs_size /run/media/ron/Games/}
+${alignc}${fs_bar 8,200 /run/media/ron/Games/}
+
+${color8}${goto 60}MEM${alignr}MAX
+RAM${goto 60}${mem}${alignr}${memmax}
+${alignc}${membar 8,200}
+Swap${goto 60}${swap}${alignr}${swapmax}
+${alignc}${swapbar 8,200}
+
+${color7}CPU:${goto 60}Used${alignr}GHz
+Avg${goto 60}${cpu cpu0}%${alignr}${freq_g}
+${alignc}${cpubar cpu0 8,200}
+
+${top name 1} ${top cpu 1} ${top mem 1}
+${top name 2} ${top cpu 2} ${top mem 2}
+${top name 3} ${top cpu 3} ${top mem 3}
+${top name 4} ${top cpu 4} ${top mem 4}
+${top name 5} ${top cpu 5} ${top mem 5}
+
+${color2}${hr}
+
+${alignc}${mpd_artist}
+${alignc}${mpd_album}
+${alignc}${if_match ${execi 5 expr length “mpc --format %title% | head -n 1”} >= 25}${scroll 25 3 ${mpd_title}}${else}${mpd_title}${endif}
+${mpd_bar 8,140}${alignr}${mpd_elapsed}/${mpd_length}
+${if_running mpd}${execi 4 ~/.config/conky/res/albumart}\
+${image ~/.config/conky/res/album_bg.png -p 0,795 -s 250x250}\
+${image /tmp/cover2.png -p 25,820 -s 200x200}\
+]];
