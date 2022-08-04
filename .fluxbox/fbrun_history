@@ -1,0 +1,14 @@
+thunar
+gnome-font-viewer
+gucharmap
+urxvt
+alacritty
+gcolor2
+wmnetload
+wmnetload -i wlo1
+wmwifi
+leafpad
+gimp
+wmcpuload
+wmnetload -i enp7s0
+bbpager

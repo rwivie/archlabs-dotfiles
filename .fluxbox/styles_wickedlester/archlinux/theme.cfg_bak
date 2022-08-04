@@ -1,0 +1,163 @@
+#This work is licensed under a Creative Commons Attribution-Share Alike 3.0 License.
+#(http://creativecommons.org/licenses/by-sa/3.0/de/deed.en)
+
+#======================
+# name: archlinux2
+# made: wickedlester 
+# date: 05.14.06 (ported to fluxbox 11/29/2020)
+#======================
+
+#=== fonts ===========
+
+
+menu.frame.font:                                Dejavu Sans-10
+menu.title.font:                                Dejavu Sans-10
+menu.title.font.effect:                         shadow
+menu.title.font.shadow.color:                   #2E3440
+menu.hilite.font:                               Dejavu Sans-10
+toolbar.clock.font:                             Dejavu Sans-10
+toolbar.workspace.font:                         Dejavu Sans-10
+toolbar.iconbar.focused.font:                   Dejavu Sans-10
+toolbar.iconbar.focused.font.effect:            shadow
+toolbar.iconbar.focused.font.shadow.color:      #2E3440
+toolbar.iconbar.unfocused.font:                 Dejavu Sans-10
+#toolbar.button.font:                           Font Awesome 5 Pro Light-10
+toolbar.button.font:                            Material Design Icons-12
+window.font:                                    Dejavu Sans-10
+window.font.effect:                             shadow
+window.font.shadow.color:                       #2E3440
+
+
+#borderWidth: 1
+#marginWidth: 3
+#menu.marginWidth: 3
+
+#toolbar.alignment: center
+#menu.title.alignment: center
+#menu.frame.alignment: left
+#window.alignment: center
+#window.frame.borderWidth: 1
+
+#== toolbar
+toolbar: raised gradient vertical border
+toolbar.justify: center
+toolbar.color: #4c5458
+toolbar.colorTo: #373e41
+toolbar.borderWidth: 1
+toolbar.borderColor: #000000
+
+toolbar.workspace: sunken gradient vertical border
+toolbar.workspace.justify: left
+toolbar.workspace.color: #4e81a9
+toolbar.workspace.colorTo: #759fbf
+toolbar.workspace.textColor: #000000
+#toolbar.label.marginWidth: 1
+
+toolbar.clock: sunken gradient vertical border
+toolbar.clock.justify: center
+toolbar.clock.color: #4e81a9
+toolbar.clock.colorTo: #759fbf
+toolbar.clock.textColor: #000000
+
+toolbar.iconbar.empty:				sunken gradient vertical border
+toolbar.iconbar.empty.color:			#4c5458
+toolbar.iconbar.empty.colorTo:			#373e41
+
+
+toolbar.iconbar.focused: sunken gradient vertical border
+toolbar.windowLabel.Color1: #4e81a9
+toolbar.windowLabel.Color2: #759fbf
+toolbar.windowLabel.textColor: #000000
+
+toolbar.button.appearance: raised gradient vertical border
+toolbar.button.color1: #4c5458
+toolbar.button.color2: #373e41
+toolbar.button.foregroundColor: #ffffff
+
+toolbar.button.pressed.appearance: sunken gradient vertical border
+toolbar.button.pressed.color1: #4e81a9
+toolbar.button.pressed.color2: #759fbf
+toolbar.button.pressed.foregroundColor: #000000
+
+#== menu
+menu.title.appearance: raised gradient vertical border
+menu.title.color1: #4c5458
+menu.title.color2: #373e41
+menu.title.textColor: #ffffff
+menu.title.borderColor: #000000
+menu.title.font:	snap-8
+menu.title.marginWidth: 2
+
+menu.frame.appearance: raised gradient elliptic border
+menu.frame.color1: #4e81a9
+menu.frame.color2: #759fbf
+menu.frame.textColor: #000000
+menu.frame.foregroundColor: #000000
+menu.frame.marginWidth: 3
+
+menu.active.appearance: sunken gradient elliptic border
+menu.active.color1: #4c5458
+menu.active.color2: #373e41
+menu.active.foregroundColor: #ffffff
+menu.active.textColor: #ffffff
+menu.active.borderColor: #000000
+
+#== window
+window.title.focus.appearance: raised gradient vertical border
+window.title.focus.color1: #4c5458
+window.title.focus.color2: #373e41
+window.title.focus.borderColor: #000000
+
+window.title.unfocus.appearance: raised gradient vertical border
+window.title.unfocus.color1: #4c5458
+window.title.unfocus.color2: #373e41
+window.title.unfocus.borderColor: #000000
+
+window.label.focus.appearance: sunken gradient vertical border
+window.label.focus.Color1: #4e81a9
+window.label.focus.Color2: #759fbf
+window.label.focus.textColor: #000000
+window.label.marginWidth: 1
+window.label.unfocus.appearance: parentrelative
+window.label.unfocus.textColor: #000000
+
+window.button.focus.appearance: raised gradient vertical border
+window.button.focus.color1: #4c5458
+window.button.focus.color2: #373e41
+window.button.focus.foregroundColor: #ffffff
+window.button.unfocus.appearance: parentrelative
+window.button.unfocus.foregroundColor: #000000
+
+window.handle.focus.appearance: raised gradient vertical border
+window.handle.focus.color1: #4c5458
+window.handle.focus.color2: #373e41
+window.handle.focus.borderColor: #000000
+window.handle.unfocus.appearance: flat solid border
+window.handle.unfocus.color: #4c5458
+window.handle.unfocus.borderColor: #000000
+window.handleHeight: 3
+
+window.grip.focus.appearance: raised solid border
+window.grip.focus.color: #4e81a9
+window.grip.focus.borderColor: #000000
+window.grip.unfocus.appearance: flat solid border
+window.grip.unfocus.color: #4e81a9
+window.grip.unfocus.borderColor: #000000
+
+window.frame.focus.borderColor: #000000
+window.frame.unfocus.borderColor: #000000
+
+#== slit
+#uncomment for dark colored slit
+#slit.appearance: raised gradient vertical border
+#slit.color1: #4c5458
+#slit.color2: #373e41
+#slit.borderColor: #000000
+#slit.borderwidth: 1
+
+#comment this out for dark colored slit
+slit.appearance: raised gradient elliptic border
+slit.color1: #4e81a9
+slit.color2: #759fbf
+slit.borderColor: #000000
+slit.borderwidth: 1

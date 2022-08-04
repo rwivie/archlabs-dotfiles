@@ -1,0 +1,41 @@
+------------------------------------------
+Log File: /home/wickedlester/.fluxbox/log
+Fluxbox version: 1.3.7
+GIT Revision: f76720d918d1a2c72811a6ec5b3a1fc4b52f768c
+Compiled: Nov 27 2020 10:12:25
+Compiler: GCC
+Compiler version: 10.2.0
+
+Defaults: 
+       menu: /usr/share/fluxbox/menu
+ windowmenu: /usr/share/fluxbox/windowmenu
+      style: /usr/share/fluxbox/styles/bloe
+       keys: /usr/share/fluxbox/keys
+       init: /usr/share/fluxbox/init
+        nls: /usr/share/fluxbox/nls
+
+Compiled options (- => disabled): 
+BIDI
+-DEBUG
+EWMH
+IMLIB2
+NLS
+REMEMBER
+RENDER
+SHAPE
+SLIT
+SYSTEMTRAY
+TOOLBAR
+RANDR
+XFT
+XINERAMA
+XMB
+XPM
+
+------------------------------------------
+Failed to read: session.screen0.struts
+Setting default value
+Failed to read: session.screen0.struts.1
+Setting default value
+Failed to read: session.screen0.iconbar.iconifiedPattern
+Setting default value

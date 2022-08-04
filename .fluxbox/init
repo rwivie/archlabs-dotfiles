@@ -1,0 +1,110 @@
+session.screen0.window.focus.alpha:	255
+session.screen0.window.unfocus.alpha:	255
+session.screen0.iconbar.alignment:	Left
+session.screen0.iconbar.iconWidth:	160
+session.screen0.iconbar.iconTextPadding:	15
+session.screen0.iconbar.usePixmap:	false
+session.screen0.iconbar.mode:	{static groups} (workspace)
+session.screen0.systray.pinLeft:	
+session.screen0.systray.pinRight:	
+session.screen0.titlebar.left:	Stick 
+session.screen0.titlebar.right:	Minimize Maximize Close 
+session.screen0.toolbar.button.power.label:	\363\260\244\206
+session.screen0.toolbar.button.power.commands:	:Exec rofi_run_fb -l
+session.screen0.toolbar.button.thunar.label:	\363\260\211\213
+session.screen0.toolbar.button.thunar.commands:	:Exec thunar
+session.screen0.toolbar.button.screenshot.label:	\363\260\204\200
+session.screen0.toolbar.button.screenshot.commands:	:Exec scrot -d 5 '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Downloads && notify-send -i ~/.local/share/icons/Qogir-ubuntu-dark/16/devices/camera-photo.svg "Screenshot taken!"'
+session.screen0.toolbar.button.retro.label:	\363\260\226\272
+session.screen0.toolbar.button.retro.commands:	:Exec retroarch
+session.screen0.toolbar.button.alacritty.label:	\363\260\236\267
+session.screen0.toolbar.button.alacritty.commands:	:Exec alacritty
+session.screen0.toolbar.button.vivaldi.label:	\363\260\226\237
+session.screen0.toolbar.button.vivaldi.commands:	:Exec vivaldi-snapshot
+session.screen0.toolbar.button.google_chrome.label:	\363\260\212\257
+session.screen0.toolbar.button.google_chrome.commands:	:Exec google-chrome-stable
+session.screen0.toolbar.button.lock.label:	\363\260\214\276
+session.screen0.toolbar.button.lock.commands:	:Exec Lockit
+session.screen0.toolbar.button.jgmenu.label:	"\363\260\243\207"
+session.screen0.toolbar.button.jgmenu.commands:	:Exec jgmenu_run >/dev/null 2>&1 &
+session.screen0.toolbar.button.firefox.label:	\363\260\210\271
+session.screen0.toolbar.button.firefox.commands:	:Exec firefox
+session.screen0.toolbar.maxOver:	false
+session.screen0.toolbar.tools:	button.jgmenu,button.firefox,button.google_chrome,button.vivaldi,button.retro,button.screenshot,button.thunar,button.alacritty,iconbar,systemtray,clock,prevworkspace,workspacename,nextworkspace,button.lock,button.power
+session.screen0.toolbar.placement:	TopLeft
+session.screen0.toolbar.onhead:	1
+session.screen0.toolbar.autoRaise:	false
+session.screen0.toolbar.height:	0
+session.screen0.toolbar.autoHide:	false
+session.screen0.toolbar.alpha:	255
+session.screen0.toolbar.widthPercent:	100
+session.screen0.toolbar.visible:	true
+session.screen0.toolbar.layer:	Dock
+session.screen0.clientMenu.usePixmap:	true
+session.screen0.slit.onhead:	0
+session.screen0.slit.autoHide:	false
+session.screen0.slit.alpha:	255
+session.screen0.slit.maxOver:	false
+session.screen0.slit.placement:	RightBottom
+session.screen0.slit.autoRaise:	false
+session.screen0.slit.layer:	Desktop
+session.screen0.slit.acceptKdeDockapps:	true
+session.screen0.menu.alpha:	255
+session.screen0.tabs.usePixmap:	false
+session.screen0.tabs.maxOver:	true
+session.screen0.tabs.intitlebar:	true
+session.screen0.tab.placement:	TopLeft
+session.screen0.tab.width:	10
+session.screen0.maxIgnoreIncrement:	true
+session.screen0.showwindowposition:	false
+session.screen0.autoRaise:	true
+session.screen0.windowPlacement:	RowMinOverlapPlacement
+session.screen0.strftimeFormat:	%l:%M | %d %b
+session.screen0.defaultDeco:	
+session.screen0.workspaceNames:	\356\236\225,\357\202\254,\357\201\273,\357\220\216,
+session.screen0.workspacewarpinghorizontal:	true
+session.screen0.focusNewWindows:	true
+session.screen0.colPlacementDirection:	TopToBottom
+session.screen0.workspaces:	4
+session.screen0.noFocusWhileTypingDelay:	0
+session.screen0.rowPlacementDirection:	LeftToRight
+session.screen0.edgeSnapThreshold:	10
+session.screen0.windowMenu:	/home/ron/.fluxbox/windowmenu
+session.screen0.opaqueResize:	true
+session.screen0.clickRaises:	true
+session.screen0.maxDisableResize:	false
+session.screen0.focusSameHead:	false
+session.screen0.menuDelay:	200
+session.screen0.workspacewarpinghorizontaloffset:	1
+session.screen0.tooltipDelay:	999999999
+session.screen0.focusModel:	ClickFocus
+session.screen0.tabFocusModel:	ClickToTabFocus
+session.screen0.opaqueMove:	true
+session.screen0.fullMaximization:	false
+session.screen0.workspacewarpingvertical:	true
+session.screen0.edgeResizeSnapThreshold:	0
+session.screen0.workspacewarpingverticaloffset:	1
+session.screen0.maxDisableMove:	false
+session.screen0.allowRemoteActions:	false
+session.screen0.workspacewarping:	true
+session.screen0.opaqueResizeDelay:	50
+session.screen0.demandsAttentionTimeout:	500
+session.autoRaiseDelay:	250
+session.slitlistFile:	/home/ron/.fluxbox/slitlist
+session.forcePseudoTransparency:	false
+session.focusTabMinWidth:	20
+session.styleOverlay:	/home/ron/.fluxbox/overlay
+session.cacheLife:	5
+session.tabsAttachArea:	Window
+session.tabs:	false
+session.colorsPerChannel:	4
+session.doubleClickInterval:	250
+session.styleFile:	/home/ron/.fluxbox/styles_wickedlester/gruvbox-dark
+session.appsFile:	/home/ron/.fluxbox/apps
+session.keyFile:	~/.fluxbox/keys
+session.ignoreBorder:	false
+session.menuFile:	~/.fluxbox/menu
+session.cacheMax:	200
+session.menuSearch:	itemstart
+session.tabPadding:	0
+session.configVersion:	13

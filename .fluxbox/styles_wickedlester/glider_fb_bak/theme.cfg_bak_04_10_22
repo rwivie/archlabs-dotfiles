@@ -1,0 +1,260 @@
+#style.name: glider_v2
+#style.author: wickedlester
+#style.date: 01.14.06 [modified on 03.19.06]
+#style.credits: made to go with a wallpaper by hermik http://www.freundt.org/florian/
+#style.comments: wallpaper link http://www.deviantart.com/view/1805536/
+
+#==== misc ====
+
+##rootCommand: bsetroot -gradient diagonal -from #CEDDD8 -to #949D9A -mod 4 4 -fg #89977E -bg #BEC3B8
+#rootCommand: bsetroot -gradient elliptic -from #516147 -to #949D9A -mod 4 6 -fg #89977E -bg #BEC3B8
+##rootCommand: bsetroot -f "C:\bblean\backgrounds\glidingintoacolddawn1-0.png"
+
+#borderColor: #5A6A50
+#*font: consolas
+
+#==== background ====
+
+#fbsetbg -b -gradient elliptic -from #516147 -to #949D9A -mod 4 6 -fg #89977E -bg #BEC3B8
+
+##background:                                    flat
+##background.color:                              #4C566A
+background: 					solid gradient elliptic
+#background:                                     mod
+background.color: 				#516147
+background.colorTo:				#949D9A
+#background.modX:                                4
+#background.modY:                                6
+##background:                                     fullscreen
+##background.pixmap:                              /home/ron/.fluxbox/styles_wickedlester/glider_fb/gliding_into_a_cold_dawn_by_hermik_edit.jpg
+
+#==== fonts ====
+
+
+#menu.frame.font:                                Dejavu Sans-10
+#menu.title.font:                                Dejavu Sans-10
+#menu.title.font.effect:                         shadow
+#menu.title.font.shadow.color:                   #2E3440
+#menu.hilite.font:                               Dejavu Sans-10
+#toolbar.clock.font:                             Dejavu Sans-10
+#toolbar.workspace.font:                         Dejavu Sans-10
+#toolbar.iconbar.focused.font:                   Dejavu Sans-10
+#toolbar.iconbar.focused.font.effect:            shadow
+#toolbar.iconbar.focused.font.shadow.color:      #2E3440
+#toolbar.iconbar.unfocused.font:                 Dejavu Sans-10
+##toolbar.button.font:                           Font Awesome 5 Pro Light-10
+#toolbar.button.font:                            Material Design Icons-12
+#window.font:                                    Dejavu Sans-10
+#window.font.effect:                             shadow
+#window.font.shadow.color:                       #2E3440
+
+!==== menu
+
+menu.bevelWidth:				1
+
+menu.borderColor:				#5A6A50
+menu.borderWidth:				1
+
+menu.bullet.position:				Right
+menu.bullet:                                    diamond
+menu.selected.pixmap:				selected3.xpm				
+menu.hilite.selected.pixmap:		        selected3.xpm
+menu.unselected.pixmap:			        
+menu.hilite.unselected.pixmap:			                           
+#menu.submenu.pixmap:				bullet.xpm
+#menu.hilite.submenu.pixmap:
+
+
+menu.title: 					raised bevel1 gradient elliptic
+menu.title.color: 				#D2DDD9
+menu.title.colorTo: 				#7E8D70
+menu.title.textColor: 				#212121
+menu.title.justify: 				right
+
+menu.frame: 					raised bevel1 gradient elliptic
+menu.frame.color: 				#E6ECE0
+menu.frame.colorTo: 				#CED4C8
+menu.frame.textColor: 				#212121
+menu.frame.disableColor: 			#212121
+menu.frame.justify: 				left 
+
+menu.hilite: 					sunken bevel1 gradient elliptic
+menu.hilite.color: 				#949D9A
+menu.hilite.colorTo: 				#CEDDD8
+menu.hilite.textColor: 				#212121
+
+#==== toolbar ====
+
+toolbar.bevelWidth:				3
+toolbar.borderWidth:				1
+toolbar.borderColor:                            #5A6A50
+toolbar.height:					20
+toolbar.justify:				Center
+toolbar: 					raised gradient elliptic bevel1
+toolbar.color: 					#D2DDD9
+toolbar.colorTo: 				#7E8D70
+
+toolbar.clock: 					sunken bevel1 gradient vertical
+toolbar.clock.color: 				#949D9A
+toolbar.clock.colorTo: 				#CEDDD8
+toolbar.clock.borderWidth: 			1 
+toolbar.clock.borderColor: 			#727D79
+toolbar.clock.textColor: 			#212121
+
+#toolbar.workspace: 				sunken gradient vertical bevel1
+#toolbar.workspace.color: 			#949D9A
+#toolbar.workspace.colorTo: 			#CEDDD8
+#toolbar.workspace.borderColor: 			#727D79
+#toolbar.workspace.borderWidth: 			1
+#toolbar.workspace.textColor: 			#5A6A50
+
+toolbar.workspace:				parentRelative
+#toolbar.workspace.color:			#D2DDD9
+#toolbar.workspace.colorTo:			#7E8D70
+toolbar.workspace.textColor:                    #5A6A50
+
+toolbar.button: 				raised bevel1 gradient vertical
+toolbar.button.color: 				#FDFFFA
+toolbar.button.colorTo: 			#CFD4CD
+toolbar.button.PicColor: 			#7c7c7c
+toolbar.button.borderColor: 			#727D79
+toolbar.button.borderWidth: 			1
+
+toolbar.button.pressed: 			sunken bevel1 gradient vertical
+toolbar.button.pressed.color: 			#FDFFFA
+toolbar.button.pressed.colorTo: 		#CFD4CD
+toolbar.button.pressed.PicColor: 		#5A6A50
+toolbar.button.pressed.borderColor: 		#727D79
+toolbar.button.pressed.borderWidth: 		1 
+
+#toolbar.label: sunken gradient vertical bevel1
+#toolbar.label.color: #949D9A
+#toolbar.label.colorTo: #CEDDD8
+#toolbar.label.borderWidth: 1
+#toolbar.label.borderColor: #727D79
+#toolbar.label.textColor: #212121
+
+toolbar.iconbar.empty:				sunken bevel1 gradient elliptic
+toolbar.iconbar.empty.color:			#949D9A
+toolbar.iconbar.empty.colorTo:			#CEDDD8
+
+toolbar.iconbar.focused.borderWidth:	        0
+toolbar.iconbar.focused:			sunken bevel1 gradient elliptic
+toolbar.iconbar.focused.color:			#949D9A
+toolbar.iconbar.focused.colorTo:		#CEDDD8
+toolbar.iconbar.focused.textColor:		#212121
+toolbar.iconbar.focused.justify:		Center
+
+toolbar.iconbar.unfocused.borderWidth:	        0
+toolbar.iconbar.unfocused:			raised bevel1 gradient elliptic
+toolbar.iconbar.unfocused.color:		#D2DDD9
+toolbar.iconbar.unfocused.colorTo:		#7E8D70
+toolbar.iconbar.unfocused.textColor:	        #212121
+toolbar.iconbar.unfocused.justify:		Center
+
+#toolbar.systray:                                raised bevel1 gradient elliptic
+#toolbar.systray.borderWidth:                    
+#toolbar.systray.borderColor:                    
+#toolbar.systray.color:                          #949D9A
+#toolbar.systray.colorTo:                        #CEDDD8
+#toolbar.systray:                                 flat
+toolbar.systray:				raised bevel1
+#toolbar.systray.borderWidth:
+#toolbar.systray.borderColor:
+toolbar.systray.color:                           #5A6A50
+
+!==== window
+
+window.bevelWidth:				2
+window.borderWidth:                             0
+window.borderColor:				#5A6A50
+
+window.justify: 				left
+window.title.height:				20
+
+window.title.focus: 				raised gradient elliptic bevel1
+window.title.focus.color: 			#D2DDD9
+window.title.focus.colorTo: 			#7E8D70
+window.title.unfocus: 				raised gradient elliptic bevel1
+window.title.unfocus.color: 			#E6ECE0
+window.title.unfocus.colorTo: 			#94978E
+
+window.label.focus: 				sunken gradient vertical bevel1
+window.label.focus.color: 			#949D9A
+window.label.focus.colorTo: 			#CEDDD8
+window.label.focus.textColor: 			#212121
+
+window.label.unfocus: 				parentRelative 
+window.label.unfocus.textColor: 		#7c7c7c
+
+window.button.focus: 				raised gradient rectangle bevel1
+window.button.focus.color: 			#FDFFFA
+window.button.focus.colorTo: 			#CFD4CD
+window.button.focus.picColor: 			#7c7c7c
+
+
+window.button.unfocus: 				parentRelative
+window.button.unfocus.picColor: 		#7c7c7c
+
+window.button.pressed: 				sunken gradient vertical border
+window.button.pressed.color: 			#FDFFFA
+window.button.pressed.colorTo: 			#CFD4CD
+window.button.pressed.picColor: 		#7c7c7c
+
+window.close.pixmap:                            close_focus.xpm
+window.close.pressed.pixmap:                    close.xpm
+window.close.unfocus.pixmap:                    close_focus.xpm
+window.iconify.pixmap:                          icon_focus.xpm
+window.iconify.pressed.pixmap:                  icon.xpm
+window.iconify.unfocus.pixmap:                  icon_focus.xpm
+window.maximize.pixmap:                         max_focus.xpm
+window.maximize.pressed.pixmap:                 max.xpm
+window.maximize.unfocus.pixmap:                 max_focus.xpm
+
+
+window.handle.focus: 				raised gradient vertical bevel1
+window.handle.focus.color: 			#FDFFFA
+window.handle.focus.colorTo: 			#CFD4CD
+
+window.handle.unfocus: 				raised gradient vertical bevel1
+window.handle.unfocus.color: 			#E6ECE0
+window.handle.unfocus.colorTo: 			#D8E6E9
+window.handleWidth: 				4
+
+window.grip.focus: 				raised gradient elliptic bevel1
+window.grip.focus.color: 			#E6ECE0
+window.grip.focus.colorTo: 			#7E8D70
+
+window.grip.unfocus: 				raised gradient elliptic bevel1
+window.grip.unfocus.color: 			#E6ECE0
+window.grip.unfocus.colorTo: 			#94978E
+
+!==== slit
+
+slit: raised gradient vertical bevel1
+slit.color: #D2DDD9
+slit.colorTo: #7E8D70
+slit.borderWidth: 2
+slit.borderColor: #5A6A50
+slit.bevelWidth: 1
+
+! -- bbpager --
+bbpager.desktop.focus:         raised Gradient Vertical 
+bbpager.desktop.focus.color:   #E6ECE0
+bbpager.desktop.focus.colorTo: #CED4C8
+
+bbpager.desktop:               Sunken Gradient Horizontal Bevel1
+bbpager.desktop.color:       #E6ECE0  
+bbpager.desktop.colorTo:      #CED4C8
+
+bbpager.window:                     raised gradient elliptic
+bbpager.window.color:               #D2DDD9
+bbpager.window.colorto:             #7E8D70
+
+bbpager.window.focus:               raised gradient elliptic
+bbpager.window.focus.color:         #E6ECE0
+bbpager.window.focus.colorto:       #8F978C
+
+bbpager.active.window.borderColor:  #5A6A50
+bbpager.inactive.window.borderColor: #8F978C
+bbpager.active.desktop.borderColor:  #5A6A50

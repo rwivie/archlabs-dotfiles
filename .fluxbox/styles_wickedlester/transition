@@ -1,0 +1,184 @@
+style.name: transition
+style.author: wickedlester
+style.date: 01.12.05
+style.credits: inspired from a gtk2 style
+style.comments:
+
+rootCommand: fbsetbg -b -gradient elliptic -from rgb:6D/A0/43 -to rgb:AD/DE/ED
+
+*font: snap-8
+
+#== toolbar
+
+toolbar.appearance: raised gradient vertical border
+toolbar.color1: #81CF58
+toolbar.color2: #619042
+toolbar.borderColor: #73903E
+toolbar.borderWidth: 1 
+toolbar.alignment: center 
+toolbar.marginWidth: 3
+toolbar.font: snap-8
+
+toolbar.button.appearance: raised gradient vertical border
+toolbar.button.color1: #DBE9EC
+toolbar.button.color2: #C8C4C1
+toolbar.button.foregroundColor: #7c7c7c
+toolbar.button.borderColor: #2F5F83
+toolbar.button.borderWidth: 1
+toolbar.button.marginWidth: 3
+
+toolbar.button.pressed.appearance: sunken gradient vertical border
+toolbar.button.pressed.color1: #4BBBCF
+toolbar.button.pressed.color2: #72C9DD
+toolbar.button.pressed.borderColor: #2F5F83
+toolbar.button.pressed.borderWidth: 1 
+toolbar.button.pressed.foregroundColor: #0C202B
+
+toolbar.clock.appearance: sunken gradient vertical border
+toolbar.clock.color1: #4BBBCF
+toolbar.clock.color2: #72C9DD
+toolbar.clock.borderWidth: 1 
+toolbar.clock.borderColor: #2F5F83
+toolbar.clock.textColor: #212121
+toolbar.clock.marginWidth: 3
+
+toolbar.label.appearance: sunken gradient vertical border
+toolbar.label.color1: #4BBBCF
+toolbar.label.color2: #72C9DD
+toolbar.label.borderWidth: 1
+toolbar.label.borderColor: #2F5F83
+toolbar.label.textColor: #212121
+toolbar.label.marginWidth: 3
+
+toolbar.windowLabel.appearance: sunken gradient vertical border
+toolbar.windowLabel.color1: #4BBBCF
+toolbar.windowLabel.color2: #72C9DD
+toolbar.windowLabel.borderColor: #2F5F83
+toolbar.windowLabel.borderWidth: 1
+toolbar.windowLabel.textColor: #030700
+
+#== menu
+
+menu.title.appearance: raised gradient vertical border
+menu.title.color1: #81CF58
+menu.title.color2: #619042
+menu.title.borderColor:  #73903E
+menu.title.borderWidth: 1 
+menu.title.foregroundColor: #FFFFED
+menu.title.textColor: #030700
+menu.title.alignment: center 
+menu.title.marginWidth: 3
+menu.title.font: snap-8
+
+menu.frame.appearance: raised gradient vertical border
+menu.frame.color1: #D5E3E6
+menu.frame.color2: #ADDEED
+menu.frame.borderColor: #73903E
+menu.frame.borderWidth: 1 
+menu.frame.foregroundColor: #7c7c7c
+menu.frame.textColor: #7c7c7c
+menu.frame.disabledColor: #7c7c7c
+menu.frame.alignment: left 
+menu.frame.marginWidth: 5
+menu.frame.font: snap-8 
+
+menu.active.appearance: sunken gradient vertical border
+menu.active.color1: #CFD4D8
+menu.active.color2: #D8E6E9
+menu.active.borderWidth: 1
+menu.active.borderColor: #7c7c7c
+menu.active.foregroundColor: #212121
+menu.active.textColor: #212121
+
+#== window
+
+window.alignment: center
+window.title.marginWidth: 3
+window.title.focus.appearance: raised gradient vertical border
+window.title.focus.color1: #81CF58
+window.title.focus.color2: #619042
+window.title.focus.borderColor: #73903E
+window.title.focus.borderWidth: 1
+
+window.title.unfocus.appearance: raised gradient vertical 
+window.title.unfocus.color1: #DBE9EC
+window.title.unfocus.color2: #C8C4C1
+window.title.unfocus.borderColor: #7c7c7c
+window.title.unfocus.borderWidth: 1 
+
+window.label.focus.appearance: sunken gradient vertical border
+window.label.focus.color1: #4BBBCF
+window.label.focus.color2: #72C9DD
+window.label.focus.borderColor: #2F5F83
+window.label.focus.borderWidth: 1
+window.label.focus.textColor: #212121
+window.label.marginWidth: 1
+
+window.label.unfocus.appearance: sunken gradient vertical 
+window.label.unfocus.color1: #CFD4D8
+window.label.unfocus.color2: #D8E6E9
+window.label.unfocus.textColor: #7c7c7c
+
+window.button.marginWidth: 3
+window.button.focus.appearance: raised gradient rectangle border
+window.button.focus.color1: #DBE9EC
+window.button.focus.color2: #C8C4C1
+window.button.focus.foregroundColor: #7c7c7c
+window.button.focus.borderWidth: 1
+window.button.focus.borderColor: #2F5F83
+
+window.button.unfocus.appearance: parentRelative
+window.button.unfocus.color1: #DBE9EC
+window.button.unfocus.color2: #C8C4C1
+window.button.unfocus.foregroundColor: #7c7c7c
+
+window.button.pressed.appearance: sunken gradient vertical border
+window.button.pressed.color1: #4BBBCF
+window.button.pressed.color2: #72C9DD
+window.button.pressed.borderWidth: 1 
+window.button.pressed.borderColor: #2F5F83
+window.button.pressed.foregroundColor: #0C202B
+
+window.handle.focus.appearance: raised gradient vertical border
+window.handle.focus.color1: #FFFFFF
+window.handle.focus.color2: #EBEEF5
+window.handle.focus.borderColor: #2F5F83
+window.handle.focus.borderWidth: 1
+
+window.handle.unfocus.appearance: raised gradient vertical border
+window.handle.unfocus.color1: #FFFFED
+window.handle.unfocus.color2: #EAEFF5
+window.handle.unfocus.borderColor: #000000
+window.handle.unfocus.borderWidth: 1
+window.handleHeight: 3
+
+window.grip.focus.appearance: raised gradient vertical border
+window.grip.focus.color1: #81CF58
+window.grip.focus.color2: #619042
+window.grip.focus.borderColor: #73903E
+window.grip.focus.borderWidth: 1 
+
+window.grip.unfocus.appearance: raised gradient vertical border
+window.grip.unfocus.color1: #DBE9EC
+window.grip.unfocus.color2: #C8C4C1
+window.grip.unfocus.borderColor:  #7c7c7c
+window.grip.unfocus.borderWidth: 1
+
+window.frame.focus.borderColor: #73903E
+window.frame.unfocus.borderColor: #7c7c7c
+window.frame.borderWidth: 1
+
+#== slit
+#slit.appearance: raised gradient diagonal border
+#slit.color1: #81CF58
+#slit.color2: #619042
+#slit.borderWidth: 1 
+#slit.borderColor: #73903E
+#slit.marginWidth: 1
+
+slit.appearance: raised gradient vertical border
+slit.color1: #4BBBCF
+slit.color2: #72C9DD
+slit.borderWidth: 1 
+slit.borderColor: #2F5F83
+slit.marginWidth: 1
