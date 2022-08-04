@@ -83,7 +83,6 @@ scrolling:
 # Font configuration (changes require restart)
 font:
   normal:
-     #family: MesloLGS NF
      family: JetBrainsMono Nerd Font
   # Normal (roman) font face
   #normal:
