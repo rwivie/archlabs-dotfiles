@@ -40,7 +40,7 @@ Xcursor.size: 16
 *color7:  #a89984
 *color15: #ebdbb2
 
-!=== xterm ===
+!==== xterm ====
 
 xterm*font: 7x13
 xterm*faceName: PragmataPro:size=10:antialias=false
@@ -51,9 +51,9 @@ xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*termName: xterm-color
 xterm*eightBitInput: false
 
-!=== URxvt ===
+!==== URxvt ====
 
-!=== added on 01_26_19
+!==== added on 01_26_19
 !URxvt*.transparent: true
 !URxvt*.shading: 40
 !URxvt*.blurRadius: 80
@@ -101,7 +101,7 @@ URxvt.tabbed.tab-fg:    15
 URxvt.tabbed.tab-bg:    4
 URxvt*buffered:         false
 
-!=== Fonts config ===
+!==== Fonts config ====
 !Xft.dpi: 142
 Xft.dpi: 96
 Xft.autohint: 0
@@ -110,3 +110,158 @@ Xft.hintstyle:  hintfull
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
+
+! --- xosview --- !
+
+xosview*title:      xosview
+xosview*geometry:   150x266
+xosview*font:       Iosevka Nerd Font Mono:size=11
+! xosview*font:       6x13
+xosview*captions:   False
+xosview*labels:     True
+xosview*usedlabels: True
+
+xosview*background:      #ebdbb2
+xosview*foreground:      #282828
+xosview*meterLabelColor: #282828
+xosview*usedLabelColor:  #282828
+
+! General Meter Resources
+! replace prefix with the correct meter name (see man xosview2, section X RESOURCES)
+! xosview*prefixPriority:   5
+! xosview*prefixUsedFormat: autoscale
+! xosview*prefixDecay:      False
+! xosview*prefixUsedDecay:  True
+! xosview*prefixGraph:      True
+
+! Load Meter
+xosview*load: False
+
+! CPU Meter
+xosview*cpu:                True
+xosview*cpuFormat:          single
+xosview*cpuPriority:        5
+xosview*cpuUsedFormat:      percent
+xosview*cpuDecay:           False
+xosview*cpuUsedDecay:       False
+xosview*cpuGraph:           True
+
+xosview*cpuUserColor:       #458588
+xosview*cpuSystemColor:     #458588
+xosview*cpuWaitColor:       #83a598
+xosview*cpuNiceColor:       #458588
+xosview*cpuInterruptColor:  #83a598
+xosview*cpuSInterruptColor: #83a598
+xosview*cpuStolenColor:     #458588
+xosview*cpuGuestColor:      #458588
+xosview*cpuNiceGuestColor:  #458588
+xosview*cpuFreeColor:       #282828
+
+! Memory Meter
+xosview*mem:               True
+xosview*memPriority:       5
+xosview*memUsedFormat:     autoscale
+xosview*memDecay:          False
+xosview*memUsedDecay:      False
+xosview*memGraph:          True
+
+xosview*memUsedColor:      #458588
+xosview*memBufferColor:    #83a598
+xosview*memCacheColor:     #83a598
+xosview*memSwapCacheColor: #83a598
+xosview*memFreeColor:      #282828
+
+! Swap Meter
+xosview*swap: False
+
+! IRQ Meter
+xosview*irqrate: False
+
+! Page Meter
+xosview*page: False
+
+! Wireless Link Meter 
+xosview*wlink:          False
+xosview*wlinkPoorValue: 20
+xosview*wlinkBacground: #282828
+xosview*wlinkGoodColor: #458588
+xosview*wlinkPoorColor: #cc241d
+
+! Network Meter
+xosview*net:           True
+! 60 Mib/s
+xosview*netBandwidth:  6553600
+xosview*netIface:      wlp37s0
+xosview*netPriority:   5
+xosview*netUsedFormat: autoscale
+xosview*netDecay:      False
+xosview*netUsedDecay:  False
+xosview*netGraph:      True
+xosview*netInColor:    #458588
+xosview*netOutColor:   #b16286
+xosview*netBackground: #282828
+
+! NFS stats (client)
+xosview*NFSStats: False
+
+! NFS stats (server)
+xosview*NFSDStats: False
+
+! Interrupt Meter
+xosview*interrupts: False
+
+! Thermal Zone (GPU)
+xosview*tzone:           False
+xosview*tzoneHotTrip:    50
+xosview*tzoneCritTrip:   70
+xosview*tzonePeak:       80
+xosview*tzonePriority:   5
+xosview*tzoneUsedFormat: autoscale
+xosview*tzoneDecay:      False
+xosview*tzoneUsedDecay:  False
+xosview*tzoneGraph:      True
+xosview*tzoneBackground: #282828
+xosview*tzoneForeGround: #689d6a
+xosview*tzoneHotColor:   #d79921
+xosview*tzoneCritColor:  #cc241d
+
+! Lm Sensors Temperature
+xosview*lmstemp: False
+
+! Coretemp Meter (CPU)
+xosview*coretemp:            False
+xosview*coretempHighest:     100
+xosview*coretempHigh:        60
+xosview*coretempPriority:    5
+xosview*coretempUsedFormat:  autoscale
+xosview*coretempDecay:       False
+xosview*coretempUsedDecay:   False
+xosview*coretempGraph:       False
+xosview*coretempActColor:    #d79921
+xosview*coretempHighColor:   #cc241d
+xosview*coretempIdleColor:   #68946a
+xosview*coretempDisplayType: maximum
+
+! BSD Sensor
+xosview*bsdsensor: False
+
+! Battery Meter
+xosview*battery: False
+
+! Disk Meter
+xosview*disk: False
+
+! File System Meter
+xosview*filesys:           True
+xosview*filesysPriority:   600
+xosview*filesysUsedFormat: autoscale
+xosview*filesysDecay:      False
+xosview*filesysUsedDecay:  False
+xosview*filesysGraph:      False
+xosview*filesysMounts:     / /boot/efi /run/media/ron/Games
+xosview*filesysFGColor:    #458588
+xosview*filesysBGColor:    #282828
+xosview*filesysNoneColor:  #cc241d
+
+! RAID meter
+xosview*RAID: False
