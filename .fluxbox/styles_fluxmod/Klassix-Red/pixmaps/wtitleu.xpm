@@ -1,0 +1,34 @@
+/* XPM */
+static char *wtitleu[] = {
+/* columns rows colors chars-per-pixel */
+"5 21 7 1",
+"  c #636355555555",
+". c #7F7F4F4F4F4F",
+"X c #898955555555",
+"o c #A9A968686868",
+"O c #C0C0AFAFAFAF",
+"+ c #DFDFCDCDCDCD",
+"@ c gray100",
+/* pixels */
+"@@@@@",
+"+++++",
+"+++++",
+"OOOOO",
+"     ",
+"ooooo",
+"XXXXX",
+"XXXXX",
+"XXXXX",
+"XXXXX",
+"XXXXX",
+"XXXXX",
+"XXXXX",
+"XXXXX",
+"XXXXX",
+".....",
+"     ",
+"@@@@@",
+"+++++",
+"+++++",
+"+++++"
+};

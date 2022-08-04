@@ -1,0 +1,10 @@
+/* XPM */
+static char *frame-right-focused[] = {
+/* columns rows colors chars-per-pixel */
+"5 1 3 1",
+"  c #4C5E7C",
+". c #5F769B",
+"X c #E4E1DC",
+/* pixels */
+"X .. "
+};

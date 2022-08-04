@@ -1,0 +1,10 @@
+/*
+I host these styles that were created by various artists. 
+I want you to know I did not make them, I dont want credit for them, 
+Each style should contain license, and should also have the authors name 
+as well as contact info for getting a hold of them. All I am doing is providing 
+easy access to the old "fluxbmod-style". Themes are owned by the creator. 
+Please also follow the probably included license information in the themes.
+If an author feels offended by me for providing the style please contact me
+(tenner [at] tenr [dot] de).
+*/

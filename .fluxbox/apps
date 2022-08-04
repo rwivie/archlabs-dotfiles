@@ -21,6 +21,3 @@
   [Jump]	{yes}
   [Close]	{yes}
 [end]
-[app] (name=Kunst) (class=Sxiv)
-  [Deco]	{NONE}
-[end]

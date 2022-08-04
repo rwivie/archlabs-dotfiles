@@ -1,0 +1,34 @@
+/* XPM */
+static char *stick[] = {
+/* columns rows colors chars-per-pixel */
+"21 21 7 1",
+"  c #636355555555",
+". c #9A9A6A6A6A6A",
+"X c #A7A773737373",
+"o c #C1C185858585",
+"O c #C0C0AFAFAFAF",
+"+ c #DFDFCDCDCDCD",
+"@ c gray100",
+/* pixels */
+"@@@@@@@@@@@@@@@@@@@@@",
+"+++++++++++++++++++++",
+"+++++++++++++++++++++",
+"++++OOOOOOOOOOOOOOOOO",
+"++++O                ",
+"++++O ooooooooooooooo",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O o..............",
+"++++O                ",
+"++++@@@@@@@@@@@@@@@@@",
+"+++++++++++++++++++++",
+"+++++++++++++++++++++",
+"+++++++++++++++++++++"
+};

@@ -4,50 +4,89 @@
 #
 # Lines starting with a '#' are ignored.
 
+# Change your keymap:
+#xmodmap "/home/wickedlester/.Xmodmap"
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+
 #==== misc
 picom --config ~/.config/picom/picom.conf --experimental-backends &
 dunst &
 xrdb -load ~/.Xresources &
+numlockx on &
 
-#==== network manager applet
-nm-applet &
-
-#==== bluetooth
-blueman-applet &
+#==== polybar
+#/home/sandman/.config/polybar_openbox/run.sh &
+#tint2 &
 
 #==== Set background image
 (sleep 1; nitrogen --restore) &
 #~/.fehbg &
 
-#==== on laptops without seperate numeric keyboard put hashtag in front
-numlockx &
 
 #==== GNOME PolicyKit authentication
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 #==== Volume control for systray
-(sleep 2; pasystray --no-notify) &
+#(sleep 2; volumeicon) &
+#(sleep 2; pasystray --notify=all) &
 
 #==== Turn off/on System Beep
-xset b off
+#xset b off
 
 #==== set dpms
 #xset dpms 0 0 600 &
 
 #==== Enable power management
 #xfce4-power-manager &
+#caffeine &
 
-#==== let's tile
+
+#==== Clipboard Manager
+#(sleep 3; clipit) &
+
+#===== let's tile
 (sleep 5; zentile) &
 
 #==== hot corners with cornora-git
-cornora -br "skippy-xd" -bl "sleep 1; xset dpms force off" -v -iof &
-
+#cornora -tr "skippy-xd" -bl "sleep 1; xset dpms force off" -v -iof &
+#cornora -tr "skippy-xd" -bl "sleep 1; xset dpms force off"
+#== XFCE4 Settings
+#xfsettingsd &
+#xfsettingsd --sm-client-disable --disable-wm-check &
 #==== gtk settings
-xsettingsd &
+#xsettingsd &
 
-#== lock screen
-xautolock -time 10 -locker i3lock-arc-dark.sh -corners '+-00' -cornerdelay 15 -notify 15 -notifier "notify-send 'Screen will lock in 15 s'" &
+#==== tray and slit
+(sleep 5; nm-applet) &
+(sleep 5; pasystray) &
+(sleep 5; blueman-applet) &
+wmwifi & sleep 2
+(wmnetload -i enp7s0) & sleep 2
+wmcpuload & sleep 2
+wmmemload & sleep 2
+#bbpager &
+#"sleep 5 && bbpager &"
+
+#==== lock screen
+#xautolock -time 10 -locker blurlock4.sh -corners '+00-'
+xautolock -time 10 -locker i3lock-arc-dark.sh -corners '+-00' &
+#xautolock -time 10 -locker Lockit -corners '+00-' &
+
+## Enable Super Keys For Menu
+#ksuperkey -e 'Super_L=Alt_L|F1' &
+#ksuperkey -e 'Super_R=Alt_L|F1' &
+
+#==== slit apps
+#wmwifi &
+#wmcpuload &
+#wmnetload -i wlo1 &
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.

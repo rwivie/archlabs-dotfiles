@@ -1,0 +1,34 @@
+/* XPM */
+static char *max_uf[] = {
+/* columns rows colors chars-per-pixel */
+"21 21 7 1",
+"  c #0F2259",
+". c #262F4A",
+"X c #262F4B",
+"o c #374982",
+"O c #3C508F",
+"+ c #347F95",
+"@ c #3C8CBC",
+/* pixels */
+"                     ",
+".....................",
+"XX..XXXXXXXXXXXXXXXXX",
+"ooooooooooooooooooooo",
+"XXXXXXXXOOOOOOXXXXXXX",
+"........OOOOOO.......",
+"........OOOOOO.......",
+"........OOOOOO.......",
+"........O@@@@@+++....",
+"........O@OOOO..+....",
+"........O@OOOO..+....",
+"........O@OOOO..+....",
+"........O@OOOO..+....",
+"........O@@@@@+++....",
+"........OOOOOO.......",
+"........OOOOOO.......",
+"........OOOOOO.......",
+"........OOOOOO.......",
+"OOOOOOOOOOOOOOOOOOOOO",
+".....................",
+"                     "
+};

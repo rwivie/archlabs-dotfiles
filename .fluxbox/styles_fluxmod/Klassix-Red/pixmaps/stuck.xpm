@@ -1,0 +1,35 @@
+/* XPM */
+static char *stuck[] = {
+/* columns rows colors chars-per-pixel */
+"21 21 8 1",
+"  c #636355555555",
+". c #9A9A6A6A6A6A",
+"X c #A7A773737373",
+"o c #C1C185858585",
+"O c #C0C0AFAFAFAF",
+"+ c #DFDFCDCDCDCD",
+"@ c #EEEEE3E3E3E3",
+"# c gray100",
+/* pixels */
+"#####################",
+"+++++++++++++++++++++",
+"+++++++++++++++++++++",
+"++++OOOOOOOOOOOOOOOOO",
+"++++O                ",
+"++++O ooooooooooooooo",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O oXXXXXX XXXXXXX",
+"++++O oXXXXX @ XXXXXX",
+"++++O oXXXX @@@ XXXXX",
+"++++O oXXX @@ @@ XXXX",
+"++++O oXXX   o   XXXX",
+"++++O oXXXoooXoooXXXX",
+"++++O oXXXXXXXXXXXXXX",
+"++++O o..............",
+"++++O                ",
+"++++#################",
+"+++++++++++++++++++++",
+"+++++++++++++++++++++",
+"+++++++++++++++++++++"
+};

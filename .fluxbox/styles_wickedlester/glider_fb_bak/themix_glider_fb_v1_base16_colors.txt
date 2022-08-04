@@ -1,0 +1,585 @@
+#==== glider_fb_v1_alacritty_256
+
+# Base16 oomox-glider_fb_v1 256 - alacritty color config
+# oomox-glider_fb_v1
+colors:
+  # Default colors
+  primary:
+    background: '0x37413a'
+    foreground: '0xb7c0bc'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x37413a'
+    cursor: '0xb7c0bc'
+
+  # Normal colors
+  normal:
+    black:   '0x37413a'
+    red:     '0x838e85'
+    green:   '0xa8b3a9'
+    yellow:  '0xabb6ad'
+    blue:    '0x7f8a80'
+    magenta: '0xb7c1bc'
+    cyan:    '0xb1bbb4'
+    white:   '0xb7c0bc'
+
+  # Bright colors
+  bright:
+    black:   '0x77807b'
+    red:     '0x838e85'
+    green:   '0xa8b3a9'
+    yellow:  '0xabb6ad'
+    blue:    '0x7f8a80'
+    magenta: '0xb7c1bc'
+    cyan:    '0xb1bbb4'
+    white:   '0xe3ece8'
+
+  indexed_colors:
+    - { index: 16, color: '0x8b968f' }
+    - { index: 17, color: '0x727e76' }
+    - { index: 18, color: '0x37413a' }
+    - { index: 19, color: '0x434c48' }
+    - { index: 20, color: '0x4b554e' }
+    - { index: 21, color: '0x838e85' }
+
+#==== glider_fb_v1_alacritty
+# Base16 oomox-glider_fb_v1 - alacritty color config
+# oomox-glider_fb_v1
+colors:
+  # Default colors
+  primary:
+    background: '0x37413a'
+    foreground: '0xb7c0bc'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x37413a'
+    cursor: '0xb7c0bc'
+
+  # Normal colors
+  normal:
+    black:   '0x37413a'
+    red:     '0x838e85'
+    green:   '0xa8b3a9'
+    yellow:  '0xabb6ad'
+    blue:    '0x7f8a80'
+    magenta: '0xb7c1bc'
+    cyan:    '0xb1bbb4'
+    white:   '0xb7c0bc'
+
+  # Bright colors
+  bright:
+    black:   '0x77807b'
+    red:     '0x8b968f'
+    green:   '0x37413a'
+    yellow:  '0x434c48'
+    blue:    '0x4b554e'
+    magenta: '0x838e85'
+    cyan:    '0x727e76'
+    white:   '0xe3ece8'
+
+draw_bold_text_with_bright_colors: false
+
+#===========================================================================
+#==== base16_default
+
+scheme: "oomox-glider_fb_v1"
+author: "oomox-glider_fb_v1"
+base00: "37413a"
+base01: "37413a"
+base02: "434c48"
+base03: "77807b"
+base04: "4b554e"
+base05: "b7c0bc"
+base06: "838e85"
+base07: "e3ece8"
+base08: "838e85"
+base09: "8b968f"
+base0A: "abb6ad"
+base0B: "a8b3a9"
+base0C: "b1bbb4"
+base0D: "7f8a80"
+base0E: "b7c1bc"
+base0F: "727e76"
+
+#============================================================================
+#==== dunst
+frame_color = "#b7c0bc"
+separator_color = "#b7c0bc"
+
+[base16_low]
+    msg_urgency = low
+    background = "#37413a"
+    foreground = "#77807b"
+
+[base16_normal]
+    msg_urgency = normal
+    background = "#434c48"
+    foreground = "#b7c0bc"
+
+[base16_critical]
+    msg_urgency = critical
+    background = "#838e85"
+    foreground = "#838e85"
+#=============================================================================
+#==== i3
+## Base16 oomox-glider_fb_v1
+# Author: oomox-glider_fb_v1
+#
+# You can use these variables anywhere in the i3 configuration file.
+
+set $base00 #37413a
+set $base01 #37413a
+set $base02 #434c48
+set $base03 #77807b
+set $base04 #4b554e
+set $base05 #b7c0bc
+set $base06 #838e85
+set $base07 #e3ece8
+set $base08 #838e85
+set $base09 #8b968f
+set $base0A #abb6ad
+set $base0B #a8b3a9
+set $base0C #b1bbb4
+set $base0D #7f8a80
+set $base0E #b7c1bc
+set $base0F #727e76
+
+# Basic bar configuration using the Base16 variables.
+bar {
+    status_command i3status
+
+    colors {
+        background $base00
+        separator  $base01
+        statusline $base04
+
+        # State             Border  BG      Text
+        focused_workspace   $base05 $base0D $base00
+        active_workspace    $base05 $base03 $base00
+        inactive_workspace  $base03 $base01 $base05
+        urgent_workspace    $base08 $base08 $base00
+        binding_mode        $base00 $base0A $base00
+    }
+}
+
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base05 $base0D $base00 $base0D $base0C
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
+
+#======================================================
+#==== polybar
+[colors]
+base00 = ee37413a
+base01 = 37413a
+base02 = 434c48
+base03 = 77807b
+base04 = 4b554e
+base05 = b7c0bc
+base06 = 838e85
+base07 = e3ece8
+base08 = 838e85
+base09 = 8b968f
+base0A = abb6ad
+base0B = a8b3a9
+base0C = b1bbb4
+base0D = 7f8a80
+base0E = b7c1bc
+base0F = 727e76
+
+#========================================================
+#==== rofi
+
+/**
+ * Base16 oomox-glider_fb_v1 ROFI Color theme
+ *
+ * Authors
+ *  Scheme: oomox-glider_fb_v1
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
+
+* {
+    red:                         rgba ( 131, 142, 133, 100 % );
+    blue:                        rgba ( 127, 138, 128, 100 % );
+    lightfg:                     rgba ( 131, 142, 133, 100 % );
+    lightbg:                     rgba ( 55, 65, 58, 100 % );
+    foreground:                  rgba ( 183, 192, 188, 100 % );
+    background:                  rgba ( 55, 65, 58, 100 % );
+    background-color:            rgba ( 55, 65, 58, 0 % );
+    separatorcolor:              @foreground;
+    border-color:                @foreground;
+    selected-normal-foreground:  @lightbg;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @background;
+    selected-active-background:  @blue;
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @red;
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    active-foreground:           @blue;
+    active-background:           @background;
+    urgent-foreground:           @red;
+    urgent-background:           @background;
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @lightbg;
+    alternate-active-foreground: @blue;
+    alternate-active-background: @lightbg;
+    alternate-urgent-foreground: @red;
+    alternate-urgent-background: @lightbg;
+    spacing:                     2;
+}
+window {
+    background-color: @background;
+    border:           1;
+    padding:          5;
+}
+mainbox {
+    border:           0;
+    padding:          0;
+}
+message {
+    border:           1px dash 0px 0px ;
+    border-color:     @separatorcolor;
+    padding:          1px ;
+}
+textbox {
+    text-color:       @foreground;
+}
+listview {
+    fixed-height:     0;
+    border:           2px dash 0px 0px ;
+    border-color:     @separatorcolor;
+    spacing:          2px ;
+    scrollbar:        true;
+    padding:          2px 0px 0px ;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element {
+    border:           0;
+    padding:          1px ;
+}
+element normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:            4px ;
+    border:           0;
+    handle-color:     @normal-foreground;
+    handle-width:     8px ;
+    padding:          0;
+}
+sidebar {
+    border:           2px dash 0px 0px ;
+    border-color:     @separatorcolor;
+}
+button {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    spacing:          0px;
+    text-color:       @normal-foreground;
+    padding:          1px ;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+case-indicator {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+entry {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+prompt {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+textbox-prompt-colon {
+    expand:           false;
+    str:              ":";
+    margin:           0px 0.3000em 0.0000em 0.0000em ;
+    text-color:       inherit;
+}
+
+#=========================================
+
+#==== shell
+
+#!/bin/sh
+# base16-shell (https://github.com/chriskempson/base16-shell)
+# Base16 Shell template by Chris Kempson (http://chriskempson.com)
+# oomox-glider_fb_v1 scheme by oomox-glider_fb_v1
+
+color00="37/41/3a" # Base 00 - Black
+color01="83/8e/85" # Base 08 - Red
+color02="a8/b3/a9" # Base 0B - Green
+color03="ab/b6/ad" # Base 0A - Yellow
+color04="7f/8a/80" # Base 0D - Blue
+color05="b7/c1/bc" # Base 0E - Magenta
+color06="b1/bb/b4" # Base 0C - Cyan
+color07="b7/c0/bc" # Base 05 - White
+color08="77/80/7b" # Base 03 - Bright Black
+color09=$color01 # Base 08 - Bright Red
+color10=$color02 # Base 0B - Bright Green
+color11=$color03 # Base 0A - Bright Yellow
+color12=$color04 # Base 0D - Bright Blue
+color13=$color05 # Base 0E - Bright Magenta
+color14=$color06 # Base 0C - Bright Cyan
+color15="e3/ec/e8" # Base 07 - Bright White
+color16="8b/96/8f" # Base 09
+color17="72/7e/76" # Base 0F
+color18="37/41/3a" # Base 01
+color19="43/4c/48" # Base 02
+color20="4b/55/4e" # Base 04
+color21="83/8e/85" # Base 06
+color_foreground="b7/c0/bc" # Base 05
+color_background="37/41/3a" # Base 00
+
+if [ -n "$TMUX" ]; then
+  # Tell tmux to pass the escape sequences through
+  # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
+  put_template() { printf '\033Ptmux;\033\033]4;%d;rgb:%s\033\033\\\033\\' $@; }
+  put_template_var() { printf '\033Ptmux;\033\033]%d;rgb:%s\033\033\\\033\\' $@; }
+  put_template_custom() { printf '\033Ptmux;\033\033]%s%s\033\033\\\033\\' $@; }
+elif [ "${TERM%%[-.]*}" = "screen" ]; then
+  # GNU screen (screen, screen-256color, screen-256color-bce)
+  put_template() { printf '\033P\033]4;%d;rgb:%s\007\033\\' $@; }
+  put_template_var() { printf '\033P\033]%d;rgb:%s\007\033\\' $@; }
+  put_template_custom() { printf '\033P\033]%s%s\007\033\\' $@; }
+elif [ "${TERM%%-*}" = "linux" ]; then
+  put_template() { [ $1 -lt 16 ] && printf "\e]P%x%s" $1 $(echo $2 | sed 's/\///g'); }
+  put_template_var() { true; }
+  put_template_custom() { true; }
+else
+  put_template() { printf '\033]4;%d;rgb:%s\033\\' $@; }
+  put_template_var() { printf '\033]%d;rgb:%s\033\\' $@; }
+  put_template_custom() { printf '\033]%s%s\033\\' $@; }
+fi
+
+# 16 color space
+put_template 0  $color00
+put_template 1  $color01
+put_template 2  $color02
+put_template 3  $color03
+put_template 4  $color04
+put_template 5  $color05
+put_template 6  $color06
+put_template 7  $color07
+put_template 8  $color08
+put_template 9  $color09
+put_template 10 $color10
+put_template 11 $color11
+put_template 12 $color12
+put_template 13 $color13
+put_template 14 $color14
+put_template 15 $color15
+
+# 256 color space
+put_template 16 $color16
+put_template 17 $color17
+put_template 18 $color18
+put_template 19 $color19
+put_template 20 $color20
+put_template 21 $color21
+
+# foreground / background / cursor color
+if [ -n "$ITERM_SESSION_ID" ]; then
+  # iTerm2 proprietary escape codes
+  put_template_custom Pg b7c0bc # foreground
+  put_template_custom Ph 37413a # background
+  put_template_custom Pi b7c0bc # bold color
+  put_template_custom Pj 434c48 # selection color
+  put_template_custom Pk b7c0bc # selected text color
+  put_template_custom Pl b7c0bc # cursor
+  put_template_custom Pm 37413a # cursor text
+else
+  put_template_var 10 $color_foreground
+  if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]; then
+    put_template_var 11 $color_background
+    if [ "${TERM%%-*}" = "rxvt" ]; then
+      put_template_var 708 $color_background # internal border (rxvt)
+    fi
+  fi
+  put_template_custom 12 ";7" # cursor (reverse video)
+fi
+
+# clean up
+unset -f put_template
+unset -f put_template_var
+unset -f put_template_custom
+unset color00
+unset color01
+unset color02
+unset color03
+unset color04
+unset color05
+unset color06
+unset color07
+unset color08
+unset color09
+unset color10
+unset color11
+unset color12
+unset color13
+unset color14
+unset color15
+unset color16
+unset color17
+unset color18
+unset color19
+unset color20
+unset color21
+unset color_foreground
+unset color_background
+#=======================================================
+#==== xresources 256
+
+! Base16 oomox-glider_fb_v1
+! Scheme: oomox-glider_fb_v1
+
+#define base00 #37413a
+#define base01 #37413a
+#define base02 #434c48
+#define base03 #77807b
+#define base04 #4b554e
+#define base05 #b7c0bc
+#define base06 #838e85
+#define base07 #e3ece8
+#define base08 #838e85
+#define base09 #8b968f
+#define base0A #abb6ad
+#define base0B #a8b3a9
+#define base0C #b1bbb4
+#define base0D #7f8a80
+#define base0E #b7c1bc
+#define base0F #727e76
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
+#=================================
+#==== xresources
+! Base16 oomox-glider_fb_v1
+! Scheme: oomox-glider_fb_v1
+
+#define base00 #37413a
+#define base01 #37413a
+#define base02 #434c48
+#define base03 #77807b
+#define base04 #4b554e
+#define base05 #b7c0bc
+#define base06 #838e85
+#define base07 #e3ece8
+#define base08 #838e85
+#define base09 #8b968f
+#define base0A #abb6ad
+#define base0B #a8b3a9
+#define base0C #b1bbb4
+#define base0D #7f8a80
+#define base0E #b7c1bc
+#define base0F #727e76
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07
+
+
