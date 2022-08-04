@@ -91,8 +91,8 @@ System: ${exec lsb_release -si} Linux
 Host: ${nodename}
 Kernel: ${kernel}
 Uptime: ${uptime}
-Packages: ${execi 600 xpkg | wc -l}
-Pending Updates: ${execpi 3600 xbps-install -Mun 2> /dev/null | wc -l}
+Packages: ${execi 600 pacman -Q | wc -l}
+Pending Updates: ${execpi 3600 checkupdates | wc -l}
 #Host:${alignr}${nodename}
 #Uptime:${alignr}${uptime}
 #UTC:${alignr}${font Digital Readout Thick Upright:size=50}${time %I}:${time %M}${font}
