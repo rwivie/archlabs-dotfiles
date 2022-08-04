@@ -1,5 +1,0 @@
-#!/bin/bash
-for i in "$@";
-do
-	convert "$i" "`basename \"$i\" .png`.xpm"
-done
