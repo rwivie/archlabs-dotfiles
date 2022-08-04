@@ -17,6 +17,6 @@ now_playing_prefix = "$b$2   "
 progressbar_look = =
 user_interface = alternative
 startup_screen = "playlist"
-startup_slave_screen = "visualizer"
-locked_screen_width_part = 50
-ask_for_locked_screen_width_part = no
+#startup_slave_screen = "visualizer"
+#locked_screen_width_part = 50
+#ask_for_locked_screen_width_part = no
