@@ -6,8 +6,14 @@
  polybar-msg cmd quit
 
 # Launch Polybar, using default config location ~/.config/polybar/config.ini
-echo "---" | tee -a /home/ron/.polybar.log
-polybar top 2>&1 | tee -a /home/ron/.polybar.log & disown
-polybar bottom 2>&1 | tee -a /home/ron/.polybar.log & disown
+#echo "---" | tee -a /home/ron/.polybar_t.log
+#echo "---" | tee -a /home/ron/.polybar_b.log
+#polybar top 2>&1 | tee -a /home/ron/.polybar_t.log & disown
+#polybar bottom 2>&1 | tee -a /home/ron/.polybar_b.log & disown
 
-echo "Polybar launched..."
+#echo "---" | tee -a /home/ron/.polybar_t.log
+#echo "---" | tee -a /home/ron/.polybar_b.log
+polybar top 2>/home/ron/.polybar_t.log & disown
+polybar bottom 2>/home/ron/.polybar_b.log & disown
+
+#echo "Polybar launched..."
