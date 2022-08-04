@@ -11,3 +11,6 @@ fluxbox nord
 
 openbox gruvbox
 ![Screenshot](screenshot3.png?raw=true)
+
+jwm gruvbox
+![Screenshot](screenshot4.png?raw=true)
