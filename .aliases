@@ -68,6 +68,11 @@ alias userlogtodayfollow="journalctl _UID=1000 --since today -f"
 #==== git home backup
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+#==== for xorg
+#alias startx="startx -- -keeptty >~/.xsession-errors 2>&1"
+alias startx="startx 2> ~/.xsession-errors"
+alias started="nano ~/.xinitrc"
+
 #==== other aliases
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias wioff="nmcli r wifi off"
@@ -77,6 +82,7 @@ alias nethogs-eth="sudo nethogs enp7s0"
 alias iftop="sudo iftop -i wlo1"
 alias iftop-eth="sudo iftop -i enp7s0"
 alias sued="sudo -i nano"
+alias blue="sudo systemctl restart bluetooth"
 
 #==== misc aliases
 alias clock="tty-clock -sSctB -C 6"
