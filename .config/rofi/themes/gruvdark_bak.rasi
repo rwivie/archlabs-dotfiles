@@ -6,8 +6,6 @@
    lightcyan:        #d3869b;
    green:            #b8bb26;
    red:              #cc241d;
-   white:            #d5c4a1;
-   white2:           #fbf1c7;
 
    dark1:            #1d2021;
    dark2:            #282828;
@@ -16,14 +14,14 @@
 
    light1:           #ebdbb2;
 
-   background-color: var(dark2);
-   border-color:     var(dark1);
-   text-color:       var(white);
-   dark-text-color:  var(white);
+   background-color: var(dark1);
+   border-color:     var(dark2);
+   text-color:       var(dark3);
+   dark-text-color:  var(dark4);
    main-color:       var(blue);
    highlight:        var(light1);
    urgent-color:     var(red);
-   selected-color:   var(white2);
+   selected-color:   var(lightcyan);
 }
 
 window {
@@ -83,7 +81,7 @@ element normal.active {
 }
 
 element selected.normal {
-    background-color: var(blue);
+    background-color: var(border-color);
     text-color:       var(selected-color);
 }
 
